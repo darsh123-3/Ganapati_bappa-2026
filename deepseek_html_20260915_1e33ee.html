@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🚩 केशव बाबा तरुण मित्र मंडळ | गणेशोत्सव २०२६ हिशोब</title>
+<meta name="description" content="केशव बाबा तरुण मित्र मंडळ - गणेशोत्सव २०२६ चा संपूर्ण डिजिटल व पारदर्शक हिशोब. रक्कम जमा, खर्च, देणगीदारांची यादी.">
+
+<!-- फॉन्ट्स -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Marathi:ital@0;1&family=Mukta:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   🎨 रंग व मूलभूत सेटिंग
+   ============================================================ */
+:root{
+  --maroon:#6d0f14;
+  --maroon-dark:#4a090d;
+  --maroon-light:#8e1a20;
+  --saffron:#ff7a18;
+  --saffron-soft:#ffb347;
+  --gold:#d4a017;
+  --gold-light:#f2d377;
+  --cream:#fff8ec;
+  --cream-2:#fdf1dc;
+  --ink:#2b1810;
+  --ink-soft:#6b5545;
+  --green:#1f7a4d;
+  --red:#c0392b;
+  --shadow:0 10px 30px rgba(109,15,20,.10);
+  --shadow-lg:0 20px 50px rgba(109,15,20,.16);
+  --radius:20px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'Mukta',sans-serif;
+  background:var(--cream);
+  color:var(--ink);
+  line-height:1.7;
+  overflow-x:hidden;
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(212,160,23,.07) 0 12%, transparent 12.5%),
+    radial-gradient(circle at 88% 22%, rgba(255,122,24,.06) 0 10%, transparent 10.5%),
+    radial-gradient(circle at 50% 92%, rgba(212,160,23,.06) 0 14%, transparent 14.5%);
+  background-attachment:fixed;
+}
+
+h1,h2,h3,.font-deva{
+  font-family:'Tiro Devanagari Marathi',serif;
+  font-weight:400;
+  letter-spacing:.3px;
+}
+
+/* ============================================================
+   🚩 वरची पट्टी
+   ============================================================ */
+.top-strip{
+  background:linear-gradient(90deg,var(--maroon-dark),var(--maroon),var(--saffron),var(--maroon),var(--maroon-dark));
+  background-size:200% 100%;
+  animation:stripMove 12s linear infinite;
+  color:#ffe9b0;
+  text-align:center;
+  font-size:.85rem;
+  letter-spacing:3px;
+  padding:7px 10px;
+  font-weight:600;
+}
+@keyframes stripMove{
+  0%{background-position:0% 50%}
+  100%{background-position:200% 50%}
+}
+
+/* ============================================================
+   🧭 नेव्हिगेशन
+   ============================================================ */
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,248,236,.88);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(212,160,23,.35);
+  box-shadow:0 4px 20px rgba(109,15,20,.06);
+}
+.nav-inner{
+  max-width:1180px;margin:0 auto;
+  padding:10px 20px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand-mark{
+  width:46px;height:46px;flex:0 0 46px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 25%,#fff3d0,var(--gold-light) 45%,var(--gold));
+  border:2px solid var(--maroon);
+  display:grid;place-items:center;
+  font-size:1.5rem;color:var(--maroon);
+  box-shadow:0 4px 14px rgba(212,160,23,.5);
+  font-family:'Tiro Devanagari Marathi',serif;
+}
+.brand-name{
+  font-family:'Tiro Devanagari Marathi',serif;
+  font-size:1.02rem;color:var(--maroon);line-height:1.25;
+}
+.brand-sub{
+  font-size:.72rem;color:var(--saffron);
+  letter-spacing:2px;font-weight:700;text-transform:uppercase;
+}
+.links{display:flex;gap:6px;flex-wrap:wrap;}
+.links a{
+  text-decoration:none;color:var(--maroon);
+  font-weight:600;font-size:.92rem;
+  padding:8px 14px;border-radius:999px;
+  transition:.25s;
+}
+.links a:hover{
+  background:linear-gradient(135deg,var(--saffron),var(--gold));
+  color:#fff;
+  box-shadow:0 6px 16px rgba(255,122,24,.35);
+}
+
+/* ============================================================
+   🕉️ हिरो सेक्शन
+   ============================================================ */
+.hero{
+  position:relative;
+  text-align:center;
+  padding:70px 20px 60px;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,122,24,.14), transparent 55%),
+    radial-gradient(circle at 50% 100%, rgba(212,160,23,.12), transparent 55%);
+  pointer-events:none;
+}
+.mandala{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:640px;height:640px;
+  border-radius:50%;
+  border:1px dashed rgba(212,160,23,.35);
+  animation:spin 90s linear infinite;
+  pointer-events:none;
+}
+.mandala::before{
+  content:"";position:absolute;inset:60px;
+  border-radius:50%;
+  border:1px dashed rgba(255,122,24,.28);
+}
+.mandala::after{
+  content:"";position:absolute;inset:130px;
+  border-radius:50%;
+  border:1px solid rgba(212,160,23,.2);
+}
+@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
+
+.hero-inner{position:relative;z-index:2;max-width:900px;margin:0 auto;}
+
+.pill{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--maroon),var(--maroon-light));
+  color:#ffe9b0;
+  padding:8px 24px;border-radius:999px;
+  font-size:.85rem;font-weight:700;letter-spacing:2px;
+  border:1px solid rgba(212,160,23,.6);
+  box-shadow:0 8px 22px rgba(109,15,20,.25);
+  margin-bottom:22px;
+}
+
+.hero h1{
+  font-size:clamp(1.9rem,5.5vw,3.3rem);
+  color:var(--maroon);
+  line-height:1.25;
+  margin-bottom:10px;
+  text-shadow:0 2px 0 rgba(212,160,23,.25);
+}
+.hero .tagline{
+  font-family:'Tiro Devanagari Marathi',serif;
+  font-size:clamp(1.05rem,3vw,1.5rem);
+  color:var(--saffron);
+  margin-bottom:22px;
+  font-weight:400;
+}
+.hero p.lead{
+  color:var(--ink-soft);
+  font-size:1.02rem;
+  max-width:720px;margin:0 auto 10px;
+}
+
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px;}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 30px;border-radius:999px;
+  font-weight:700;font-size:.95rem;
+  text-decoration:none;cursor:pointer;border:none;
+  transition:.28s;font-family:'Mukta',sans-serif;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--saffron),var(--gold));
+  color:#fff;
+  box-shadow:0 10px 26px rgba(255,122,24,.42);
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(255,122,24,.55);}
+.btn-ghost{
+  background:#fff;color:var(--maroon);
+  border:2px solid var(--maroon);
+}
+.btn-ghost:hover{background:var(--maroon);color:#ffe9b0;transform:translateY(-3px);}
+
+/* ============================================================
+   👥 कार्यकारिणी
+   ============================================================ */
+.committee-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  max-width:1000px;
+  margin:0 auto;
+}
+.committee-card{
+  background:#fff;
+  border:1px solid rgba(212,160,23,.4);
+  border-radius:16px;
+  padding:18px 20px;
+  box-shadow:var(--shadow);
+  text-align:center;
+  transition:.3s;
+}
+.committee-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+.committee-card span{
+  display:block;
+  font-size:.82rem;
+  color:var(--saffron);
+  font-weight:700;
+  letter-spacing:.5px;
+  margin-bottom:6px;
+}
+.committee-card strong{
+  font-family:'Tiro Devanagari Marathi',serif;
+  font-size:1.15rem;
+  color:var(--maroon);
+  font-weight:400;
+  display:block;
+}
+.committee-card small{
+  display:block;
+  font-size:.78rem;
+  color:var(--ink-soft);
+  margin-top:4px;
+}
+.committee-card .names{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.committee-card .names strong{
+  font-size:1.05rem;
+  line-height:1.5;
+}
+
+/* ============================================================
+   📊 स्टॅट कार्ड्स
+   ============================================================ */
+.stats{
+  max-width:1180px;margin:0 auto;
+  padding:0 20px 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:20px;
+}
+.stat-card{
+  position:relative;
+  background:#fff;
+  border-radius:var(--radius);
+  padding:26px 22px;
+  border:1px solid rgba(212,160,23,.35);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  transition:.3s;
+}
+.stat-card::after{
+  content:"";position:absolute;
+  top:0;left:0;right:0;height:5px;
+  background:linear-gradient(90deg,var(--saffron),var(--gold));
+}
+.stat-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+.stat-icon{
+  width:52px;height:52px;border-radius:14px;
+  display:grid;place-items:center;font-size:1.5rem;
+  margin-bottom:14px;
+  background:linear-gradient(135deg,#fff3d6,#ffe1b0);
+  border:1px solid rgba(212,160,23,.4);
+}
+.stat-label{
+  font-size:.85rem;color:var(--ink-soft);
+  font-weight:600;letter-spacing:.5px;margin-bottom:4px;
+}
+.stat-value{
+  font-family:'Tiro Devanagari Marathi',serif;
+  font-size:1.85rem;color:var(--maroon);line-height:1.2;
+}
+.stat-note{font-size:.78rem;color:var(--ink-soft);margin-top:6px;}
+.stat-card.green .stat-value{color:var(--green);}
+.stat-card.red .stat-value{color:var(--red);}
+.stat-card.green::after{background:linear-gradient(90deg,#2ecc71,var(--green));}
+.stat-card.red::after{background:linear-gradient(90deg,#e74c3c,var(--red));}
+
+/* ============================================================
+   📑 टॅब सेक्शन
+   ============================================================ */
+.section{
+  max-width:1180px;margin:0 auto;
+  padding:60px 20px;
+}
+.section-head{text-align:center;margin-bottom:34px;}
+.section-head h2{
+  font-size:clamp(1.5rem,4vw,2.3rem);
+  color:var(--maroon);
+  margin-bottom:10px;
+}
+.section-head .ornament{
+  color:var(--gold);letter-spacing:8px;font-size:.9rem;
+  display:block;margin-bottom:8px;
+}
+.section-head p{color:var(--ink-soft);max-width:680px;margin:0 auto;font-size:.98rem;}
+
+.tabs{
+  display:flex;gap:10px;justify-content:center;
+  flex-wrap:wrap;margin-bottom:28px;
+}
+.tab-btn{
+  font-family:'Mukta',sans-serif;
+  font-size:.94rem;font-weight:700;
+  padding:12px 26px;border-radius:999px;
+  border:2px solid rgba(109,15,20,.2);
+  background:#fff;color:var(--maroon);
+  cursor:pointer;transition:.25s;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.tab-btn:hover{border-color:var(--saffron);color:var(--saffron);}
+.tab-btn.active{
+  background:linear-gradient(135deg,var(--maroon),var(--maroon-light));
+  color:#ffe9b0;border-color:transparent;
+  box-shadow:0 10px 24px rgba(109,15,20,.3);
+}
+
+.panel{display:none;animation:fadeUp .45s ease;}
+.panel.active{display:block;}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(14px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ============================================================
+   🔍 शोध + टेबल
+   ============================================================ */
+.toolbar{
+  display:flex;justify-content:space-between;
+  align-items:center;gap:14px;flex-wrap:wrap;
+  margin-bottom:16px;
+}
+.search-box{
+  position:relative;flex:1;min-width:240px;max-width:380px;
+}
+.search-box input{
+  width:100%;
+  padding:12px 18px 12px 44px;
+  border-radius:999px;
+  border:1px solid rgba(212,160,23,.5);
+  background:#fff;
+  font-family:'Mukta',sans-serif;
+  font-size:.94rem;color:var(--ink);
+  outline:none;transition:.25s;
+}
+.search-box input:focus{
+  border-color:var(--saffron);
+  box-shadow:0 0 0 4px rgba(255,122,24,.14);
+}
+.search-box span{
+  position:absolute;left:16px;top:50%;
+  transform:translateY(-50%);
+  color:var(--gold);font-size:1rem;
+}
+.count-chip{
+  background:#fff;
+  border:1px solid rgba(212,160,23,.45);
+  color:var(--maroon);
+  padding:8px 18px;border-radius:999px;
+  font-size:.85rem;font-weight:700;
+  white-space:nowrap;
+}
+
+.table-wrap{
+  overflow-x:auto;
+  border-radius:var(--radius);
+  border:1px solid rgba(212,160,23,.4);
+  background:#fffdf8;
+  box-shadow:var(--shadow);
+  -webkit-overflow-scrolling:touch;
+}
+table{width:100%;border-collapse:collapse;min-width:660px;}
+thead th{
+  background:linear-gradient(180deg,var(--maroon-light),var(--maroon-dark));
+  color:#ffe9b0;
+  font-family:'Tiro Devanagari Marathi',serif;
+  font-weight:400;
+  font-size:.92rem;
+  letter-spacing:.4px;
+  padding:15px 18px;
+  text-align:left;
+  white-space:nowrap;
+}
+tbody td{
+  padding:14px 18px;
+  border-bottom:1px dashed rgba(212,160,23,.32);
+  font-size:.94rem;
+  vertical-align:middle;
+}
+tbody tr:nth-child(even){background:rgba(255,196,87,.07);}
+tbody tr:hover{background:rgba(255,122,24,.08);}
+tbody tr:last-child td{border-bottom:none;}
+.num{
+  font-weight:700;color:var(--maroon);
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+.sr{
+  color:var(--gold);font-weight:700;
+  font-variant-numeric:tabular-nums;
+}
+.name-cell{font-weight:600;color:var(--ink);}
+.sub{display:block;font-size:.78rem;color:var(--ink-soft);font-weight:400;}
+
+.badge{
+  display:inline-block;
+  padding:4px 14px;border-radius:999px;
+  font-size:.76rem;font-weight:700;white-space:nowrap;
+}
+.badge-paid{background:rgba(31,122,77,.12);color:var(--green);border:1px solid rgba(31,122,77,.3);}
+.badge-mode{background:rgba(109,15,20,.08);color:var(--maroon);border:1px solid rgba(109,15,20,.2);}
+
+tfoot td{
+  background:linear-gradient(180deg,#fff3d6,#ffe8b8);
+  font-weight:800;color:var(--maroon);
+  font-size:1rem;padding:16px 18px;
+  border-top:2px solid var(--gold);
+}
+
+.empty-state{
+  text-align:center;padding:46px 20px;color:var(--ink-soft);
+  font-size:.98rem;
+}
+
+/* ============================================================
+   📈 सारांश
+   ============================================================ */
+.summary-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:24px;
+  margin-bottom:28px;
+}
+.summary-card{
+  background:#fff;
+  border:1px solid rgba(212,160,23,.4);
+  border-radius:var(--radius);
+  padding:26px;
+  box-shadow:var(--shadow);
+}
+.summary-card h3{
+  color:var(--maroon);font-size:1.15rem;margin-bottom:18px;
+  padding-bottom:12px;
+  border-bottom:1px dashed rgba(212,160,23,.5);
+}
+.bar-row{margin-bottom:16px;}
+.bar-top{
+  display:flex;justify-content:space-between;
+  font-size:.88rem;margin-bottom:7px;font-weight:600;
+}
+.bar-top .amt{color:var(--maroon);font-weight:800;}
+.bar-track{
+  height:11px;border-radius:999px;
+  background:rgba(212,160,23,.16);
+  overflow:hidden;
+}
+.bar-fill{
+  height:100%;border-radius:999px;
+  background:linear-gradient(90deg,var(--saffron),var(--gold));
+  width:0;transition:width 1.2s cubic-bezier(.25,.8,.3,1);
+}
+.bar-fill.maroon{background:linear-gradient(90deg,var(--maroon-light),var(--maroon));}
+.bar-fill.green{background:linear-gradient(90deg,#2ecc71,var(--green));}
+
+.balance-box{
+  text-align:center;padding:30px 20px;
+  background:linear-gradient(135deg,#fff8ec,#ffeecb);
+  border-radius:16px;
+  border:2px dashed rgba(212,160,23,.6);
+}
+.balance-box .label{font-size:.9rem;color:var(--ink-soft);font-weight:600;}
+.balance-box .amount{
+  font-family:'Tiro Devanagari Marathi',serif;
+  font-size:2.4rem;color:var(--maroon);
+  margin:8px 0;
+}
+.balance-box .hint{font-size:.83rem;color:var(--ink-soft);}
+
+/* ============================================================
+   🔔 सूचना
+   ============================================================ */
+.notice{
+  margin-top:28px;
+  background:linear-gradient(135deg,#fff6e2,#fff);
+  border:1px solid rgba(212,160,23,.5);
+  border-left:6px solid var(--saffron);
+  border-radius:16px;
+  padding:20px 24px;
+  font-size:.93rem;
+  color:var(--ink-soft);
+  box-shadow:var(--shadow);
+}
+.notice b{color:var(--maroon);}
+
+/* ============================================================
+   🙏 फूटर
+   ============================================================ */
+footer{
+  background:linear-gradient(180deg,var(--maroon),var(--maroon-dark));
+  color:#ffe9b0;
+  padding:52px 20px 26px;
+  margin-top:40px;
+  position:relative;
+  overflow:hidden;
+}
+footer::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:5px;
+  background:linear-gradient(90deg,var(--saffron),var(--gold),var(--saffron));
+}
+.footer-inner{
+  max-width:1180px;margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:34px;
+  text-align:center;
+}
+.footer-inner h4{
+  font-family:'Tiro Devanagari Marathi',serif;
+  font-size:1.15rem;margin-bottom:12px;color:var(--gold-light);
+}
+.footer-inner p{font-size:.9rem;opacity:.9;line-height:1.8;}
+.footer-inner a{color:var(--gold-light);text-decoration:none;}
+.footer-inner a:hover{text-decoration:underline;}
+.footer-bottom{
+  max-width:1180px;margin:34px auto 0;
+  padding-top:20px;
+  border-top:1px solid rgba(212,160,23,.35);
+  text-align:center;
+  font-size:.82rem;
+  opacity:.85;
+}
+.jai{
+  font-family:'Tiro Devanagari Marathi',serif;
+  font-size:1.05rem;color:var(--gold-light);
+  margin-bottom:14px;letter-spacing:1px;
+}
+
+/* ============================================================
+   ⬆️ वर जा बटण
+   ============================================================ */
+.to-top{
+  position:fixed;right:20px;bottom:20px;
+  width:48px;height:48px;border-radius:50%;
+  background:linear-gradient(135deg,var(--saffron),var(--gold));
+  color:#fff;border:none;cursor:pointer;
+  font-size:1.2rem;
+  display:grid;place-items:center;
+  box-shadow:0 10px 26px rgba(255,122,24,.5);
+  opacity:0;visibility:hidden;transition:.3s;z-index:99;
+}
+.to-top.show{opacity:1;visibility:visible;}
+.to-top:hover{transform:translateY(-4px);}
+
+/* ============================================================
+   📱 मोबाईल
+   ============================================================ */
+@media (max-width:720px){
+  .nav-inner{padding:10px 14px;}
+  .brand-name{font-size:.88rem;}
+  .brand-mark{width:40px;height:40px;flex:0 0 40px;font-size:1.25rem;}
+  .links{width:100%;justify-content:center;order:3;padding-top:8px;}
+  .links a{padding:6px 12px;font-size:.85rem;}
+  .nav-inner{flex-wrap:wrap;}
+  .hero{padding:50px 16px 44px;}
+  .mandala{width:420px;height:420px;}
+  .section{padding:44px 14px;}
+  .stats{padding:0 14px 10px;grid-template-columns:1fr 1fr;gap:12px;}
+  .stat-card{padding:18px 14px;}
+  .stat-icon{width:42px;height:42px;font-size:1.2rem;margin-bottom:10px;}
+  .stat-value{font-size:1.35rem;}
+  .stat-label{font-size:.76rem;}
+  .tab-btn{padding:10px 18px;font-size:.86rem;}
+  .toolbar{flex-direction:column;align-items:stretch;}
+  .search-box{max-width:100%;}
+  .count-chip{text-align:center;}
+  .balance-box .amount{font-size:1.9rem;}
+  .committee-grid{grid-template-columns:1fr;}
+}
+
+@media (max-width:400px){
+  .stats{grid-template-columns:1fr;}
+}
+
+/* प्रिंट */
+@media print{
+  .nav,.to-top,.top-strip,.hero-btns,.search-box{display:none!important;}
+  .panel{display:block!important;}
+  body{background:#fff;}
+  .table-wrap{box-shadow:none;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ वरची पट्टी ============ -->
+<div class="top-strip">|| श्री गणेशाय नमः ||</div>
+
+<!-- ============ नेव्हिगेशन ============ -->
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-mark">ॐ</div>
+      <div>
+        <div class="brand-name">केशव बाबा तरुण मित्र मंडळ</div>
+        <div class="brand-sub">गणेशोत्सव <span id="navYear">२०२६</span></div>
+      </div>
+    </div>
+    <nav class="links">
+      <a href="#home">मुख्यपृष्ठ</a>
+      <a href="#karyakarni">कार्यकारिणी</a>
+      <a href="#hishob">हिशोब</a>
+      <a href="#sampark">संपर्क</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ हिरो ============ -->
+<section class="hero" id="home">
+  <div class="mandala"></div>
+  <div class="hero-inner">
+    <div class="pill">🚩 गणेशोत्सव <span id="heroYear">२०२६</span> 🚩</div>
+    <h1>केशव बाबा तरुण मित्र मंडळ</h1>
+    <div class="tagline">॥ गणपती बाप्पा मोरया ॥</div>
+    <p class="lead">
+      मंडळाच्या सर्व आर्थिक व्यवहारांचा संपूर्ण हिशोब आता <b>डिजिटल स्वरूपात</b> —
+      पारदर्शक, अचूक आणि एकाच ठिकाणी. भक्तांनी दिलेला प्रत्येक रुपया आणि
+      झालेला प्रत्येक खर्च येथे स्पष्टपणे मांडलेला आहे.
+    </p>
+
+    <!-- मार्गदर्शक ब्लॉक येथून काढून टाकला -->
+
+    <div class="hero-btns">
+      <a href="#hishob" class="btn btn-primary">📊 संपूर्ण हिशोब पहा</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ कार्यकारिणी ============ -->
+<section class="section" id="karyakarni" style="padding-top:0;padding-bottom:30px;">
+  <div class="section-head">
+    <span class="ornament">❖ ❖ ❖</span>
+    <h2>🚩 कार्यकारिणी २०२६</h2>
+    <p>केशव बाबा तरुण मित्र मंडळ — नवीन कमिटी</p>
+  </div>
+
+  <div class="committee-grid">
+    <div class="committee-card"><span>अध्यक्ष</span><strong>साई सातपुते</strong></div>
+    <div class="committee-card"><span>उपाध्यक्ष</span><strong>आदित्य सातपुते</strong></div>
+    <div class="committee-card"><span>खजिनदार</span><strong>दर्शन सातपुते</strong></div>
+    <div class="committee-card"><span>कार्याध्यक्ष</span><strong>संस्कार सातपुते</strong></div>
+    <div class="committee-card"><span>सचिव</span><strong>ओंकार सातपुते</strong></div>
+    <div class="committee-card"><span>सहसचिव</span><strong>प्रसाद सातपुते</strong></div>
+    <div class="committee-card">
+      <span>मार्गदर्शक / सल्लागार मंडळ</span>
+      <div class="names">
+        <strong>अक्षय सातपुते</strong>
+        <strong>श्रेयश सातपुते</strong>
+        <strong>कृष्णा सातपुते</strong>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ स्टॅट कार्ड्स ============ -->
+<section class="stats" id="dashboard">
+  <div class="stat-card green">
+    <div class="stat-icon">💰</div>
+    <div class="stat-label">एकूण रक्कम जमा</div>
+    <div class="stat-value" data-count="0" id="statCollection">₹ 0</div>
+    <div class="stat-note">चालू वर्षातील एकूण देणगी व वर्गणी</div>
+  </div>
+
+  <div class="stat-card red">
+    <div class="stat-icon">🧾</div>
+    <div class="stat-label">एकूण खर्च</div>
+    <div class="stat-value" data-count="0" id="statExpense">₹ 0</div>
+    <div class="stat-note">उत्सवासाठी झालेला एकूण खर्च</div>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-icon">⚖️</div>
+    <div class="stat-label">शिल्लक रक्कम</div>
+    <div class="stat-value" data-count="0" id="statBalance">₹ 0</div>
+    <div class="stat-note">जमा − खर्च</div>
+  </div>
+</section>
+
+<!-- ============ हिशोब सेक्शन ============ -->
+<section class="section" id="hishob">
+  <div class="section-head">
+    <span class="ornament">❖ ❖ ❖</span>
+    <h2>मंडळाचा संपूर्ण हिशोब</h2>
+    <p>खालील टॅबवर क्लिक करून जमा, खर्च व एकूण सारांश पाहा.</p>
+  </div>
+
+  <!-- टॅब बटणे -->
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="tab-jama">💰 रक्कम जमा</button>
+    <button class="tab-btn" data-tab="tab-kharch">🧾 चालू वर्ष खर्च</button>
+    <button class="tab-btn" data-tab="tab-saransh">📈 सारांश</button>
+  </div>
+
+  <!-- ===== टॅब १ : रक्कम जमा ===== -->
+  <div class="panel active" id="tab-jama">
+    <div class="toolbar">
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" placeholder="नाव किंवा प्रकार शोधा..." data-search="jamaTable">
+      </div>
+      <div class="count-chip" id="jamaCount">एकूण नोंदी : 0</div>
+    </div>
+
+    <div class="table-wrap">
+      <table id="jamaTable">
+        <thead>
+          <tr>
+            <th>अ.क्र.</th>
+            <th>गणेश भक्ताचे नाव</th>
+            <th>दिनांक</th>
+            <th>प्रकार</th>
+            <th style="text-align:right">रक्कम</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" style="text-align:right">एकूण जमा रक्कम</td>
+            <td style="text-align:right" id="jamaTotal">₹ 0</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+  <!-- ===== टॅब २ : खर्च ===== -->
+  <div class="panel" id="tab-kharch">
+    <div class="toolbar">
+      <div class="search-box">
+        <span>🔍</span>
+        <input type="text" placeholder="खर्चाचा प्रकार किंवा नाव शोधा..." data-search="kharchTable">
+      </div>
+      <div class="count-chip" id="kharchCount">एकूण नोंदी : 0</div>
+    </div>
+
+    <div class="table-wrap">
+      <table id="kharchTable">
+        <thead>
+          <tr>
+            <th>अ.क्र.</th>
+            <th>खर्चाचा तपशील</th>
+            <th>दिनांक</th>
+            <th>कोणास दिले</th>
+            <th style="text-align:right">रक्कम</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" style="text-align:right">एकूण खर्च</td>
+            <td style="text-align:right" id="kharchTotal">₹ 0</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="notice">
+      <b>टीप :</b> प्रत्येक खर्चाची पावती व बिल मंडळाकडे जतन करून ठेवलेली आहे.
+      आवश्यक असल्यास मंडळाच्या कार्यालयात पाहावी. 🧾
+    </div>
+  </div>
+
+  <!-- ===== टॅब ३ : सारांश ===== -->
+  <div class="panel" id="tab-saransh">
+    <div class="summary-grid">
+
+      <div class="summary-card">
+        <h3>📊 जमा विरुद्ध खर्च</h3>
+        <div class="bar-row">
+          <div class="bar-top"><span>एकूण जमा</span><span class="amt" id="sumJama">₹ 0</span></div>
+          <div class="bar-track"><div class="bar-fill green" id="barJama"></div></div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-top"><span>एकूण खर्च</span><span class="amt" id="sumKharch">₹ 0</span></div>
+          <div class="bar-track"><div class="bar-fill maroon" id="barKharch"></div></div>
+        </div>
+
+        <div class="balance-box" style="margin-top:22px">
+          <div class="label">एकूण शिल्लक रक्कम</div>
+          <div class="amount" id="sumBalance">₹ 0</div>
+          <div class="hint" id="sumHint">उत्सवानंतर मंडळाकडे शिल्लक</div>
+        </div>
+      </div>
+
+      <div class="summary-card">
+        <h3>🧾 प्रमुख खर्चाची विभागणी</h3>
+        <div id="expenseBreakdown"></div>
+      </div>
+
+    </div>
+
+    <div class="notice">
+      <b>पारदर्शकतेचे वचन :</b> केशव बाबा तरुण मित्र मंडळाच्या नवीन कार्यकारिणीच्या
+      मार्गदर्शनाखाली मंडळातील <b>सर्व खर्चाचा हिशोब डिजिटल स्वरूपात</b> ठेवण्यात येत आहे.
+      या वेबसाईटवर मंडळातील सर्व खर्चाची माहिती पारदर्शकपणे एकाच ठिकाणी उपलब्ध होईल. 🚩
+      <br><br>
+      <span style="font-size:.85rem">
+        अद्ययावत केल्याची तारीख : <b id="lastUpdated">—</b>
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ फूटर ============ -->
+<footer id="sampark">
+  <div class="footer-inner">
+    <div>
+      <h4>🚩 केशव बाबा तरुण मित्र मंडळ</h4>
+      <p>गणेशोत्सव <span id="footYear">२०२६</span><br>
+      एकत्र येऊ, बाप्पाची सेवा करू, आपली परंपरा जपू.</p>
+    </div>
+
+    <div>
+      <h4>🙏 मार्गदर्शक</h4>
+      <p>
+        <b>अक्षय सातपुते</b><br>
+        <b>श्रेयश सातपुते</b><br>
+        <b>कृष्णा सातपुते</b>
+      </p>
+    </div>
+
+    <div>
+      <h4>📞 संपर्क</h4>
+      <p>
+        खजिनदार : श्री. दर्शन सातपुते
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="jai">॥ गणपती बाप्पा मोरया! मंगलमूर्ती मोरया ॥</div>
+    © <span id="copyYear">2026</span> केशव बाबा तरुण मित्र मंडळ — सर्व हक्क राखीव.<br>
+    <span style="font-size:.78rem">हा हिशोब डिजिटल स्वरूपात पारदर्शकतेसाठी प्रकाशित करण्यात आला आहे.</span>
+  </div>
+</footer>
+
+<!-- वर जा बटण -->
+<button class="to-top" id="toTop" aria-label="वर जा">↑</button>
+
+<script>
+/* ============================================================
+   📝 १. डेटा — फक्त इथे बदल करा
+   ------------------------------------------------------------
+   नवीन नोंद जोडण्यासाठी खालील यादीत नवीन ओळ जोडा.
+   रक्कम फक्त आकड्यात लिहा (उदा. 5000).
+   ============================================================ */
+
+const MANDAL = {
+  year: "२०२६",
+  lastUpdated: "१५ सप्टेंबर २०२६",
+  contactName: "श्री. दर्शन सातपुते"
+};
+
+/* ---------- १. रक्कम जमा (देणगीदार) ---------- */
+const COLLECTIONS = [
+  { name:"श्री. अक्षय सातपुते",        date:"२०२६-०८-१५", mode:"रोख",     amount:11000 },
+  { name:"श्री. बाळासाहेब कुलकर्णी",  date:"२०२६-०८-१६", mode:"UPI",     amount:11000 },
+  { name:"श्री. गणेश पाटील",          date:"२०२६-०८-१६", mode:"रोख",     amount:5000  },
+  { name:"श्री. सचिन जाधव",           date:"२०२६-०८-१७", mode:"UPI",     amount:5001  },
+  { name:"श्री. संतोष देशमुख",        date:"२०२६-०८-१७", mode:"रोख",     amount:5000  },
+  { name:"मंगल कार्यालय श्री स्वामी समर्थ", date:"२०२६-०८-१८", mode:"धनादेश", amount:5100 },
+  { name:"श्री. महेश काळे",           date:"२०२६-०८-१८", mode:"UPI",     amount:4000  },
+  { name:"श्री. राहुल शिंदे",         date:"२०२६-०८-१९", mode:"रोख",     amount:3000  },
+  { name:"श्री. सुरेश वाघमारे",       date:"२०२६-०८-१९", mode:"रोख",     amount:3000  },
+  { name:"श्री. अमोल कुलकर्णी",       date:"२०२६-०८-२०", mode:"UPI",     amount:2500  },
+  { name:"श्री. अनिकेत पवार",         date:"२०२६-०८-२०", mode:"रोख",     amount:2500  },
+  { name:"श्री. योगेश चव्हाण",        date:"२०२६-०८-२१", mode:"UPI",     amount:2100  },
+  { name:"श्री. प्रशांत मोरे",        date:"२०२६-०८-२१", mode:"रोख",     amount:2000  },
+  { name:"श्री. विशाल भोसले",         date:"२०२६-०८-२२", mode:"रोख",     amount:1500  },
+  { name:"सौ. मंगल तांबे",            date:"२०२६-०८-२२", mode:"UPI",     amount:1001  },
+  { name:"श्री. नितीन गायकवाड",       date:"२०२६-०८-२३", mode:"रोख",     amount:1000  },
+  { name:"श्री. दत्तात्रय जोशी",       date:"२०२६-०८-२३", mode:"रोख",     amount:700   }
+];
+
+/* ---------- २. चालू वर्ष खर्च ---------- */
+const EXPENSES = [
+  { purpose:"मंडप व सजावट",              date:"२०२६-०८-२४", paidTo:"श्री. विठ्ठल सजावट कार्यालय", amount:18000 },
+  { purpose:"गणेश मूर्ती",                date:"२०२६-०८-२५", paidTo:"श्री. मूर्तिकार काका",          amount:7500  },
+  { purpose:"महाप्रसाद",                  date:"२०२६-०८-२७", paidTo:"श्री. अन्नपूर्णा केटर्स",       amount:8500  },
+  { purpose:"विसर्जन मिरवणूक (ढोल-ताशा)", date:"२०२६-०८-२८", paidTo:"श्री. भोळे ढोल ताशा पथक",      amount:6000  },
+  { purpose:"अन्नदान (भंडारा)",           date:"२०२६-०८-२८", paidTo:"मंडळ स्वयंसेवक",              amount:5000  },
+  { purpose:"विद्युत व्यवस्था व रोषणाई",  date:"२०२६-०८-२४", paidTo:"श्री. किरण इलेक्ट्रिकल्स",      amount:4500  },
+  { purpose:"फोटोग्राफी व व्हिडिओग्राफी", date:"२०२६-०८-२८", paidTo:"श्री. स्टुडिओ श्रीगणेश",       amount:3000  },
+  { purpose:"आरती व पूजा साहित्य",        date:"२०२६-०८-२५", paidTo:"श्री. पुरोहित काका",           amount:2200  },
+  { purpose:"प्रसाद व फुले",              date:"२०२६-०८-२६", paidTo:"श्री. फुलवाला",                amount:1500  },
+  { purpose:"परवाना व प्रशासकीय खर्च",    date:"२०२६-०८-२२", paidTo:"स्थानिक प्रशासन",              amount:1500  }
+];
+
+/* ============================================================
+   🛠️ २. सहाय्यक फंक्शन्स
+   ============================================================ */
+const money = n => '₹ ' + Number(n).toLocaleString('en-IN');
+const sum   = (arr, key) => arr.reduce((t, o) => t + Number(o[key] || 0), 0);
+const esc   = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+/* ============================================================
+   📋 ३. टेबल रेंडर
+   ============================================================ */
+
+/* --- रक्कम जमा --- */
+function renderJama(filter = ''){
+  const tbody = document.querySelector('#jamaTable tbody');
+  const f = filter.trim().toLowerCase();
+  const rows = COLLECTIONS.filter(r =>
+    r.name.toLowerCase().includes(f) ||
+    (r.mode || '').toLowerCase().includes(f)
+  );
+
+  if(!rows.length){
+    tbody.innerHTML = `<tr><td colspan="5" class="empty-state">कोणतीही नोंद सापडली नाही 🙏</td></tr>`;
+  } else {
+    tbody.innerHTML = rows.map((r, i) => `
+      <tr>
+        <td class="sr">${i + 1}</td>
+        <td class="name-cell">${esc(r.name)}</td>
+        <td>${esc(r.date)}</td>
+        <td><span class="badge badge-paid">${esc(r.mode)}</span></td>
+        <td class="num" style="text-align:right">${money(r.amount)}</td>
+      </tr>`).join('');
+  }
+
+  document.getElementById('jamaTotal').textContent = money(sum(rows, 'amount'));
+  document.getElementById('jamaCount').textContent = 'एकूण नोंदी : ' + rows.length;
+}
+
+/* --- खर्च --- */
+function renderKharch(filter = ''){
+  const tbody = document.querySelector('#kharchTable tbody');
+  const f = filter.trim().toLowerCase();
+  const rows = EXPENSES.filter(r =>
+    r.purpose.toLowerCase().includes(f) ||
+    r.paidTo.toLowerCase().includes(f) ||
+    r.date.toLowerCase().includes(f)
+  );
+
+  if(!rows.length){
+    tbody.innerHTML = `<tr><td colspan="5" class="empty-state">कोणतीही नोंद सापडली नाही 🙏</td></tr>`;
+  } else {
+    tbody.innerHTML = rows.map((r, i) => `
+      <tr>
+        <td class="sr">${i + 1}</td>
+        <td class="name-cell">${esc(r.purpose)}</td>
+        <td>${esc(r.date)}</td>
+        <td>${esc(r.paidTo)}</td>
+        <td class="num" style="text-align:right">${money(r.amount)}</td>
+      </tr>`).join('');
+  }
+
+  document.getElementById('kharchTotal').textContent = money(sum(rows, 'amount'));
+  document.getElementById('kharchCount').textContent = 'एकूण नोंदी : ' + rows.length;
+}
+
+/* ============================================================
+   📈 ४. सारांश
+   ============================================================ */
+function renderSummary(){
+  const jama   = sum(COLLECTIONS, 'amount');
+  const kharch = sum(EXPENSES, 'amount');
+  const balance = jama - kharch;
+
+  document.getElementById('sumJama').textContent    = money(jama);
+  document.getElementById('sumKharch').textContent  = money(kharch);
+  document.getElementById('sumBalance').textContent = money(balance);
+  document.getElementById('sumHint').textContent =
+    balance >= 0 ? 'उत्सवानंतर मंडळाकडे शिल्लक' : 'मंडळावर खर्च जास्त झाला आहे';
+
+  const maxVal = Math.max(jama, kharch, 1);
+  setTimeout(() => {
+    document.getElementById('barJama').style.width   = (jama   / maxVal * 100) + '%';
+    document.getElementById('barKharch').style.width = (kharch / maxVal * 100) + '%';
+  }, 200);
+
+  /* खर्चाची विभागणी */
+  const box = document.getElementById('expenseBreakdown');
+  const sorted = [...EXPENSES].sort((a, b) => b.amount - a.amount).slice(0, 6);
+  const maxEx = sorted.length ? sorted[0].amount : 1;
+
+  box.innerHTML = sorted.map(e => `
+    <div class="bar-row">
+      <div class="bar-top">
+        <span>${esc(e.purpose)}</span>
+        <span class="amt">${money(e.amount)}</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" style="width:0" data-w="${(e.amount / maxEx * 100).toFixed(1)}"></div>
+      </div>
+    </div>`).join('');
+
+  setTimeout(() => {
+    box.querySelectorAll('.bar-fill').forEach(b => b.style.width = b.dataset.w + '%');
+  }, 300);
+}
+
+/* ============================================================
+   🔢 ५. काउंटर अ‍ॅनिमेशन
+   ============================================================ */
+function animateCounter(el, target){
+  const duration = 1300;
+  const start = performance.now();
+  function step(now){
+    const p = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = money(Math.round(target * eased));
+    if(p < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+function initCounters(){
+  const jama    = sum(COLLECTIONS, 'amount');
+  const kharch  = sum(EXPENSES, 'amount');
+  const balance = jama - kharch;
+
+  const targets = [
+    { id:'statCollection', val: jama    },
+    { id:'statExpense',    val: kharch  },
+    { id:'statBalance',    val: balance }
+  ];
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if(en.isIntersecting){
+        const t = targets.find(x => x.id === en.target.id);
+        if(t) animateCounter(en.target, t.val);
+        io.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  targets.forEach(t => {
+    const el = document.getElementById(t.id);
+    if(el) io.observe(el);
+  });
+}
+
+/* ============================================================
+   🎛️ ६. इव्हेंट्स
+   ============================================================ */
+document.addEventListener('DOMContentLoaded', () => {
+  /* वर्ष व माहिती भरा */
+  document.getElementById('navYear').textContent   = MANDAL.year;
+  document.getElementById('heroYear').textContent  = MANDAL.year;
+  document.getElementById('footYear').textContent  = MANDAL.year;
+  document.getElementById('copyYear').textContent  = new Date().getFullYear();
+  document.getElementById('lastUpdated').textContent = MANDAL.lastUpdated;
+
+  /* टेबल रेंडर */
+  renderJama();
+  renderKharch();
+  renderSummary();
+  initCounters();
+
+  /* टॅब स्विच */
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+
+      if(btn.dataset.tab === 'tab-saransh'){
+        renderSummary();
+      }
+    });
+  });
+
+  /* शोध */
+  document.querySelectorAll('[data-search]').forEach(input => {
+    input.addEventListener('input', e => {
+      const val = e.target.value;
+      const t = e.target.dataset.search;
+      if(t === 'jamaTable')   renderJama(val);
+      if(t === 'kharchTable') renderKharch(val);
+    });
+  });
+
+  /* वर जा बटण */
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', () => {
+    toTop.classList.toggle('show', window.scrollY > 500);
+  });
+  toTop.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+});
+</script>
+</body>
+</html>
