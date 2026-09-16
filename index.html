@@ -665,8 +665,6 @@ footer::before{
       झालेला प्रत्येक खर्च येथे स्पष्टपणे मांडलेला आहे.
     </p>
 
-    <!-- मार्गदर्शक ब्लॉक येथून काढून टाकला -->
-
     <div class="hero-btns">
       <a href="#hishob" class="btn btn-primary">📊 संपूर्ण हिशोब पहा</a>
     </div>
@@ -787,7 +785,7 @@ footer::before{
             <th>अ.क्र.</th>
             <th>खर्चाचा तपशील</th>
             <th>दिनांक</th>
-            <th>कोणास दिले</th>
+            <th>खर्च केलेल्याचे नाव</th>
             <th style="text-align:right">रक्कम</th>
           </tr>
         </thead>
@@ -800,10 +798,7 @@ footer::before{
         </tfoot>
       </table>
     </div>
-    <div class="notice">
-      <b>टीप :</b> प्रत्येक खर्चाची पावती व बिल मंडळाकडे जतन करून ठेवलेली आहे.
-      आवश्यक असल्यास मंडळाच्या कार्यालयात पाहावी. 🧾
-    </div>
+    <!-- टीप काढून टाकली -->
   </div>
 
   <!-- ===== टॅब ३ : सारांश ===== -->
@@ -839,10 +834,6 @@ footer::before{
       <b>पारदर्शकतेचे वचन :</b> केशव बाबा तरुण मित्र मंडळाच्या नवीन कार्यकारिणीच्या
       मार्गदर्शनाखाली मंडळातील <b>सर्व खर्चाचा हिशोब डिजिटल स्वरूपात</b> ठेवण्यात येत आहे.
       या वेबसाईटवर मंडळातील सर्व खर्चाची माहिती पारदर्शकपणे एकाच ठिकाणी उपलब्ध होईल. 🚩
-      <br><br>
-      <span style="font-size:.85rem">
-        अद्ययावत केल्याची तारीख : <b id="lastUpdated">—</b>
-      </span>
     </div>
   </div>
 </section>
@@ -893,43 +884,19 @@ footer::before{
 
 const MANDAL = {
   year: "२०२६",
-  lastUpdated: "१५ सप्टेंबर २०२६",
   contactName: "श्री. दर्शन सातपुते"
 };
 
-/* ---------- १. रक्कम जमा (देणगीदार) ---------- */
-const COLLECTIONS = [
-  { name:"श्री. अक्षय सातपुते",        date:"२०२६-०८-१५", mode:"रोख",     amount:11000 },
-  { name:"श्री. बाळासाहेब कुलकर्णी",  date:"२०२६-०८-१६", mode:"UPI",     amount:11000 },
-  { name:"श्री. गणेश पाटील",          date:"२०२६-०८-१६", mode:"रोख",     amount:5000  },
-  { name:"श्री. सचिन जाधव",           date:"२०२६-०८-१७", mode:"UPI",     amount:5001  },
-  { name:"श्री. संतोष देशमुख",        date:"२०२६-०८-१७", mode:"रोख",     amount:5000  },
-  { name:"मंगल कार्यालय श्री स्वामी समर्थ", date:"२०२६-०८-१८", mode:"धनादेश", amount:5100 },
-  { name:"श्री. महेश काळे",           date:"२०२६-०८-१८", mode:"UPI",     amount:4000  },
-  { name:"श्री. राहुल शिंदे",         date:"२०२६-०८-१९", mode:"रोख",     amount:3000  },
-  { name:"श्री. सुरेश वाघमारे",       date:"२०२६-०८-१९", mode:"रोख",     amount:3000  },
-  { name:"श्री. अमोल कुलकर्णी",       date:"२०२६-०८-२०", mode:"UPI",     amount:2500  },
-  { name:"श्री. अनिकेत पवार",         date:"२०२६-०८-२०", mode:"रोख",     amount:2500  },
-  { name:"श्री. योगेश चव्हाण",        date:"२०२६-०८-२१", mode:"UPI",     amount:2100  },
-  { name:"श्री. प्रशांत मोरे",        date:"२०२६-०८-२१", mode:"रोख",     amount:2000  },
-  { name:"श्री. विशाल भोसले",         date:"२०२६-०८-२२", mode:"रोख",     amount:1500  },
-  { name:"सौ. मंगल तांबे",            date:"२०२६-०८-२२", mode:"UPI",     amount:1001  },
-  { name:"श्री. नितीन गायकवाड",       date:"२०२६-०८-२३", mode:"रोख",     amount:1000  },
-  { name:"श्री. दत्तात्रय जोशी",       date:"२०२६-०८-२३", mode:"रोख",     amount:700   }
-];
+/* ---------- १. रक्कम जमा (देणगीदार) — सध्या रिकामे ---------- */
+const COLLECTIONS = [];
 
-/* ---------- २. चालू वर्ष खर्च ---------- */
+/* ---------- २. चालू वर्ष खर्च — तुमची माहिती ---------- */
 const EXPENSES = [
-  { purpose:"मंडप व सजावट",              date:"२०२६-०८-२४", paidTo:"श्री. विठ्ठल सजावट कार्यालय", amount:18000 },
-  { purpose:"गणेश मूर्ती",                date:"२०२६-०८-२५", paidTo:"श्री. मूर्तिकार काका",          amount:7500  },
-  { purpose:"महाप्रसाद",                  date:"२०२६-०८-२७", paidTo:"श्री. अन्नपूर्णा केटर्स",       amount:8500  },
-  { purpose:"विसर्जन मिरवणूक (ढोल-ताशा)", date:"२०२६-०८-२८", paidTo:"श्री. भोळे ढोल ताशा पथक",      amount:6000  },
-  { purpose:"अन्नदान (भंडारा)",           date:"२०२६-०८-२८", paidTo:"मंडळ स्वयंसेवक",              amount:5000  },
-  { purpose:"विद्युत व्यवस्था व रोषणाई",  date:"२०२६-०८-२४", paidTo:"श्री. किरण इलेक्ट्रिकल्स",      amount:4500  },
-  { purpose:"फोटोग्राफी व व्हिडिओग्राफी", date:"२०२६-०८-२८", paidTo:"श्री. स्टुडिओ श्रीगणेश",       amount:3000  },
-  { purpose:"आरती व पूजा साहित्य",        date:"२०२६-०८-२५", paidTo:"श्री. पुरोहित काका",           amount:2200  },
-  { purpose:"प्रसाद व फुले",              date:"२०२६-०८-२६", paidTo:"श्री. फुलवाला",                amount:1500  },
-  { purpose:"परवाना व प्रशासकीय खर्च",    date:"२०२६-०८-२२", paidTo:"स्थानिक प्रशासन",              amount:1500  }
+  { purpose:"मशीन दुरुस्ती", date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:300  },
+  { purpose:"नवीन माइक",     date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:1600 },
+  { purpose:"लाइट माळ",      date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:400  },
+  { purpose:"अगरबत्ती",      date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:200  },
+  { purpose:"कुलूप",         date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:30   }
 ];
 
 /* ============================================================
@@ -1003,12 +970,13 @@ function renderSummary(){
   const jama   = sum(COLLECTIONS, 'amount');
   const kharch = sum(EXPENSES, 'amount');
   const balance = jama - kharch;
+  const displayBalance = balance >= 0 ? balance : 0;
 
   document.getElementById('sumJama').textContent    = money(jama);
   document.getElementById('sumKharch').textContent  = money(kharch);
-  document.getElementById('sumBalance').textContent = money(balance);
+  document.getElementById('sumBalance').textContent = money(displayBalance);
   document.getElementById('sumHint').textContent =
-    balance >= 0 ? 'उत्सवानंतर मंडळाकडे शिल्लक' : 'मंडळावर खर्च जास्त झाला आहे';
+    balance >= 0 ? 'उत्सवानंतर मंडळाकडे शिल्लक' : 'कृपया जमा नोंदी भरा';
 
   const maxVal = Math.max(jama, kharch, 1);
   setTimeout(() => {
@@ -1056,11 +1024,12 @@ function initCounters(){
   const jama    = sum(COLLECTIONS, 'amount');
   const kharch  = sum(EXPENSES, 'amount');
   const balance = jama - kharch;
+  const displayBalance = balance >= 0 ? balance : 0;
 
   const targets = [
     { id:'statCollection', val: jama    },
     { id:'statExpense',    val: kharch  },
-    { id:'statBalance',    val: balance }
+    { id:'statBalance',    val: displayBalance }
   ];
 
   const io = new IntersectionObserver((entries) => {
@@ -1088,7 +1057,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('heroYear').textContent  = MANDAL.year;
   document.getElementById('footYear').textContent  = MANDAL.year;
   document.getElementById('copyYear').textContent  = new Date().getFullYear();
-  document.getElementById('lastUpdated').textContent = MANDAL.lastUpdated;
 
   /* टेबल रेंडर */
   renderJama();
