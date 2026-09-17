@@ -798,7 +798,6 @@ footer::before{
         </tfoot>
       </table>
     </div>
-    <!-- टीप काढून टाकली -->
   </div>
 
   <!-- ===== टॅब ३ : सारांश ===== -->
@@ -817,7 +816,7 @@ footer::before{
         </div>
 
         <div class="balance-box" style="margin-top:22px">
-          <div class="label">एकूण शिल्लक रक्कम</div>
+          <div class="label" id="sumLabel">एकूण शिल्लक रक्कम</div>
           <div class="amount" id="sumBalance">₹ 0</div>
           <div class="hint" id="sumHint">उत्सवानंतर मंडळाकडे शिल्लक</div>
         </div>
@@ -896,7 +895,8 @@ const EXPENSES = [
   { purpose:"नवीन माइक",     date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:1600 },
   { purpose:"लाइट माळ",      date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:400  },
   { purpose:"अगरबत्ती",      date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:200  },
-  { purpose:"कुलूप",         date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:30   }
+  { purpose:"कुलूप",         date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:30   },
+  { purpose:"गणेश मूर्ती",   date:"२०२६-०९-१६", paidTo:"सतीश सातपुते", amount:1000 }
 ];
 
 /* ============================================================
@@ -970,13 +970,21 @@ function renderSummary(){
   const jama   = sum(COLLECTIONS, 'amount');
   const kharch = sum(EXPENSES, 'amount');
   const balance = jama - kharch;
-  const displayBalance = balance >= 0 ? balance : 0;
 
   document.getElementById('sumJama').textContent    = money(jama);
   document.getElementById('sumKharch').textContent  = money(kharch);
-  document.getElementById('sumBalance').textContent = money(displayBalance);
-  document.getElementById('sumHint').textContent =
-    balance >= 0 ? 'उत्सवानंतर मंडळाकडे शिल्लक' : 'कृपया जमा नोंदी भरा';
+
+  // If no collections yet, show total expense instead of balance
+  if (jama === 0) {
+    document.getElementById('sumLabel').textContent = 'एकूण खर्च';
+    document.getElementById('sumBalance').textContent = money(kharch);
+    document.getElementById('sumHint').textContent = 'उत्सवासाठी झालेला एकूण खर्च';
+  } else {
+    document.getElementById('sumLabel').textContent = 'एकूण शिल्लक रक्कम';
+    document.getElementById('sumBalance').textContent = money(balance >= 0 ? balance : 0);
+    document.getElementById('sumHint').textContent =
+      balance >= 0 ? 'उत्सवानंतर मंडळाकडे शिल्लक' : 'कृपया जमा नोंदी भरा';
+  }
 
   const maxVal = Math.max(jama, kharch, 1);
   setTimeout(() => {
