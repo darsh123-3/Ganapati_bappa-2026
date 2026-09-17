@@ -784,16 +784,17 @@ footer::before{
           <tr>
             <th>अ.क्र.</th>
             <th>खर्चाचा तपशील</th>
-            <th>दिनांक</th>
-            <th>खर्च केलेल्याचे नाव</th>
             <th style="text-align:right">रक्कम</th>
+            <th>खर्च केलेल्याचे नाव</th>
+            <th>दिनांक</th>
           </tr>
         </thead>
         <tbody></tbody>
         <tfoot>
           <tr>
-            <td colspan="4" style="text-align:right">एकूण खर्च</td>
+            <td colspan="2" style="text-align:right">एकूण खर्च</td>
             <td style="text-align:right" id="kharchTotal">₹ 0</td>
+            <td colspan="2"></td>
           </tr>
         </tfoot>
       </table>
@@ -953,9 +954,9 @@ function renderKharch(filter = ''){
       <tr>
         <td class="sr">${i + 1}</td>
         <td class="name-cell">${esc(r.purpose)}</td>
-        <td>${esc(r.date)}</td>
-        <td>${esc(r.paidTo)}</td>
         <td class="num" style="text-align:right">${money(r.amount)}</td>
+        <td>${esc(r.paidTo)}</td>
+        <td>${esc(r.date)}</td>
       </tr>`).join('');
   }
 
