@@ -695,25 +695,10 @@ footer::before{
     <div class="committee-card"><span>सचिव</span><strong>ओंकार सातपुते</strong></div>
     <div class="committee-card"><span>सहसचिव</span><strong>प्रसाद सातपुते</strong></div>
     <div class="committee-card">
-      <span>कार्यवाह</span>
-      <div class="names">
-        <strong>कृष्णा किरण सातपुते</strong>
-        <strong>चैतन सातपुते</strong>
-      </div>
-    </div>
-    <div class="committee-card">
       <span>प्रकाशयोजना प्रमुख / ध्वनी सहाय्यक</span>
       <div class="names">
         <strong>राज सातपुते</strong>
         <strong>ओम सातपुते</strong>
-      </div>
-    </div>
-    <div class="committee-card">
-      <span>कार्यकारिणी सदस्य</span>
-      <div class="names">
-        <strong>कुणाल सातपुते</strong>
-        <strong>सार्थक सातपुते</strong>
-        <strong>सार्थक जंगम</strong>
       </div>
     </div>
     <div class="committee-card">
@@ -722,6 +707,22 @@ footer::before{
         <strong>अक्षय सातपुते</strong>
         <strong>श्रेयश सातपुते</strong>
         <strong>कृष्णा सागर सातपुते</strong>
+      </div>
+    </div>
+    <div class="committee-card">
+      <span>कार्यवाह</span>
+      <div class="names">
+        <strong>कृष्णा किरण सातपुते</strong>
+        <strong>चैतन सातपुते</strong>
+        <strong>सार्थक जंगम</strong>
+      </div>
+    </div>
+    <div class="committee-card">
+      <span>कार्यकारिणी सदस्य</span>
+      <div class="names">
+        <strong>कुणाल सातपुते</strong>
+        <strong>सार्थक सातपुते</strong>
+        <strong>तन्मय सातपुते</strong>
       </div>
     </div>
   </div>
@@ -1005,7 +1006,6 @@ function renderSummary(){
   document.getElementById('sumJama').textContent    = money(jama);
   document.getElementById('sumKharch').textContent  = money(kharch);
 
-  // If no collections yet, show total expense instead of balance
   if (jama === 0) {
     document.getElementById('sumLabel').textContent = 'एकूण खर्च';
     document.getElementById('sumBalance').textContent = money(kharch);
@@ -1023,7 +1023,6 @@ function renderSummary(){
     document.getElementById('barKharch').style.width = (kharch / maxVal * 100) + '%';
   }, 200);
 
-  /* खर्चाची विभागणी */
   const box = document.getElementById('expenseBreakdown');
   const sorted = [...EXPENSES].sort((a, b) => b.amount - a.amount).slice(0, 6);
   const maxEx = sorted.length ? sorted[0].amount : 1;
@@ -1091,19 +1090,16 @@ function initCounters(){
    🎛️ ६. इव्हेंट्स
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
-  /* वर्ष व माहिती भरा */
   document.getElementById('navYear').textContent   = MANDAL.year;
   document.getElementById('heroYear').textContent  = MANDAL.year;
   document.getElementById('footYear').textContent  = MANDAL.year;
   document.getElementById('copyYear').textContent  = new Date().getFullYear();
 
-  /* टेबल रेंडर */
   renderJama();
   renderKharch();
   renderSummary();
   initCounters();
 
-  /* टॅब स्विच */
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -1117,7 +1113,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* शोध */
   document.querySelectorAll('[data-search]').forEach(input => {
     input.addEventListener('input', e => {
       const val = e.target.value;
@@ -1127,7 +1122,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* वर जा बटण */
   const toTop = document.getElementById('toTop');
   window.addEventListener('scroll', () => {
     toTop.classList.toggle('show', window.scrollY > 500);
