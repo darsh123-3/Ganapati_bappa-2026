@@ -222,12 +222,12 @@ h1,h2,h3,.font-deva{
 .btn-ghost:hover{background:var(--maroon);color:#ffe9b0;transform:translateY(-3px);}
 
 /* ============================================================
-   👥 कार्यकारिणी
+   👥 कार्यकारिणी — दोन सदस्य एका रांगेत
    ============================================================ */
 .committee-grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
+  grid-template-columns:repeat(2, 1fr);
+  gap:16px;
   max-width:1000px;
   margin:0 auto;
 }
@@ -235,10 +235,14 @@ h1,h2,h3,.font-deva{
   background:#fff;
   border:1px solid rgba(212,160,23,.4);
   border-radius:16px;
-  padding:18px 20px;
+  padding:16px 20px;
   box-shadow:var(--shadow);
   text-align:center;
   transition:.3s;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:92px;
 }
 .committee-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
 .committee-card span{
@@ -262,14 +266,17 @@ h1,h2,h3,.font-deva{
   color:var(--ink-soft);
   margin-top:4px;
 }
+/* ✅ प्रत्येक नाव वेगळ्या ओळीवर */
 .committee-card .names{
   display:flex;
   flex-direction:column;
   gap:2px;
+  align-items:center;
 }
 .committee-card .names strong{
   font-size:1.05rem;
   line-height:1.5;
+  display:block;
 }
 
 /* ============================================================
@@ -678,7 +685,11 @@ footer::before{
   .search-box{max-width:100%;}
   .count-chip{text-align:center;}
   .balance-box .amount{font-size:1.9rem;}
-  .committee-grid{grid-template-columns:1fr;}
+  .committee-grid{grid-template-columns:repeat(2, 1fr); gap:10px;}
+  .committee-card{padding:12px 10px; min-height:80px;}
+  .committee-card span{font-size:.72rem;}
+  .committee-card strong{font-size:.95rem;}
+  .committee-card .names strong{font-size:.88rem;}
   .winners-grid{grid-template-columns:repeat(3, 1fr); gap:8px;}
   .winner-card{padding:12px 6px;}
   .winner-card .game-name{font-size:.68rem;}
@@ -688,6 +699,11 @@ footer::before{
 
 @media (max-width:400px){
   .stats{grid-template-columns:1fr;}
+  .committee-grid{grid-template-columns:repeat(2, 1fr); gap:8px;}
+  .committee-card{padding:10px 6px; min-height:74px;}
+  .committee-card span{font-size:.65rem;}
+  .committee-card strong{font-size:.82rem;}
+  .committee-card .names strong{font-size:.78rem;}
   .winners-grid{grid-template-columns:repeat(3, 1fr); gap:6px;}
   .winner-card{padding:10px 4px;}
   .winner-card .game-name{font-size:.62rem; min-height:3em;}
