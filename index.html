@@ -273,6 +273,67 @@ h1,h2,h3,.font-deva{
 }
 
 /* ============================================================
+   🏆 खेळ विजेते — एका रांगेत
+   ============================================================ */
+.winners-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:16px;
+  max-width:1000px;
+  margin:0 auto 20px;
+}
+.winner-card{
+  background:#fff;
+  border:1px solid rgba(212,160,23,.4);
+  border-radius:16px;
+  padding:18px 14px;
+  box-shadow:var(--shadow);
+  text-align:center;
+  transition:.3s;
+}
+.winner-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+.winner-card .game-name{
+  display:block;
+  font-size:.82rem;
+  color:var(--saffron);
+  font-weight:700;
+  letter-spacing:.5px;
+  margin-bottom:6px;
+  min-height:2.4em;
+}
+.winner-card strong{
+  font-family:'Tiro Devanagari Marathi',serif;
+  font-size:1.1rem;
+  color:var(--maroon);
+  font-weight:400;
+  display:block;
+}
+.winner-card .prize{
+  display:inline-block;
+  margin-top:8px;
+  background:linear-gradient(135deg,var(--saffron),var(--gold));
+  color:#fff;
+  padding:4px 16px;
+  border-radius:999px;
+  font-weight:700;
+  font-size:.9rem;
+}
+.prize-note{
+  text-align:center;
+  margin-top:20px;
+  font-weight:600;
+  color:var(--maroon);
+  background:linear-gradient(135deg,#fff8ec,#ffeecb);
+  padding:12px 20px;
+  border-radius:12px;
+  border-left:5px solid var(--saffron);
+  max-width:800px;
+  margin-left:auto;
+  margin-right:auto;
+  box-shadow:var(--shadow);
+}
+
+/* ============================================================
    📊 स्टॅट कार्ड्स
    ============================================================ */
 .stats{
@@ -618,10 +679,20 @@ footer::before{
   .count-chip{text-align:center;}
   .balance-box .amount{font-size:1.9rem;}
   .committee-grid{grid-template-columns:1fr;}
+  .winners-grid{grid-template-columns:repeat(3, 1fr); gap:8px;}
+  .winner-card{padding:12px 6px;}
+  .winner-card .game-name{font-size:.68rem;}
+  .winner-card strong{font-size:.85rem;}
+  .winner-card .prize{font-size:.75rem; padding:3px 10px;}
 }
 
 @media (max-width:400px){
   .stats{grid-template-columns:1fr;}
+  .winners-grid{grid-template-columns:repeat(3, 1fr); gap:6px;}
+  .winner-card{padding:10px 4px;}
+  .winner-card .game-name{font-size:.62rem; min-height:3em;}
+  .winner-card strong{font-size:.78rem;}
+  .winner-card .prize{font-size:.7rem; padding:2px 8px;}
 }
 
 /* प्रिंट */
@@ -653,6 +724,7 @@ footer::before{
     <nav class="links">
       <a href="#home">मुख्यपृष्ठ</a>
       <a href="#karyakarni">कार्यकारिणी</a>
+      <a href="#winners">खेळ विजेते</a>
       <a href="#hishob">हिशोब</a>
       <a href="#sampark">संपर्क</a>
     </nav>
@@ -732,6 +804,37 @@ footer::before{
   </div>
 </section>
 
+<!-- ============ खेळ विजेते ============ -->
+<section class="section" id="winners" style="padding-top:0;padding-bottom:30px;">
+  <div class="section-head">
+    <span class="ornament">❖ ❖ ❖</span>
+    <h2>🏆 गणेशोत्सव खेळ विजेते २०२६</h2>
+    <p>गणेशोत्सवानिमित्त आयोजित खेळांमधील विजेते</p>
+  </div>
+
+  <div class="winners-grid">
+    <div class="winner-card">
+      <span class="game-name">संगीत खुर्ची</span>
+      <strong>स्वरा सातपुते</strong>
+      <span class="prize">₹ ५१</span>
+    </div>
+    <div class="winner-card">
+      <span class="game-name">तळ्यात मळ्यात (छोटा गट)</span>
+      <strong>आदित्य सातपुते</strong>
+      <span class="prize">₹ ५१</span>
+    </div>
+    <div class="winner-card">
+      <span class="game-name">तळ्यात मळ्यात (मोठा गट)</span>
+      <strong>मयूर सातपुते</strong>
+      <span class="prize">₹ ५१</span>
+    </div>
+  </div>
+
+  <p class="prize-note">
+    बक्षीस रक्कम दिनांक २३ सप्टेंबर २०२६ रोजी विजेत्यांना दिली जाईल. 🙏
+  </p>
+</section>
+
 <!-- ============ स्टॅट कार्ड्स ============ -->
 <section class="stats" id="dashboard">
   <div class="stat-card green">
@@ -764,15 +867,15 @@ footer::before{
     <p>खालील टॅबवर क्लिक करून जमा, खर्च व एकूण सारांश पाहा.</p>
   </div>
 
-  <!-- टॅब बटणे -->
+  <!-- टॅब बटणे — चालू वर्ष खर्च is default active -->
   <div class="tabs">
-    <button class="tab-btn active" data-tab="tab-jama">💰 रक्कम जमा</button>
-    <button class="tab-btn" data-tab="tab-kharch">🧾 चालू वर्ष खर्च</button>
+    <button class="tab-btn" data-tab="tab-jama">💰 रक्कम जमा</button>
+    <button class="tab-btn active" data-tab="tab-kharch">🧾 चालू वर्ष खर्च</button>
     <button class="tab-btn" data-tab="tab-saransh">📈 सारांश</button>
   </div>
 
   <!-- ===== टॅब १ : रक्कम जमा ===== -->
-  <div class="panel active" id="tab-jama">
+  <div class="panel" id="tab-jama">
     <div class="toolbar">
       <div class="search-box">
         <span>🔍</span>
@@ -803,8 +906,8 @@ footer::before{
     </div>
   </div>
 
-  <!-- ===== टॅब २ : खर्च ===== -->
-  <div class="panel" id="tab-kharch">
+  <!-- ===== टॅब २ : खर्च (Default Active) ===== -->
+  <div class="panel active" id="tab-kharch">
     <div class="toolbar">
       <div class="search-box">
         <span>🔍</span>
@@ -932,7 +1035,8 @@ const EXPENSES = [
   { purpose:"लाइट माळ",      date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:400  },
   { purpose:"अगरबत्ती",      date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:200  },
   { purpose:"कुलूप",         date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:30   },
-  { purpose:"गणेश मूर्ती",   date:"२०२६-०९-१६", paidTo:"सतीश सातपुते", amount:1000 }
+  { purpose:"गणेश मूर्ती",   date:"२०२६-०९-१६", paidTo:"सतीश सातपुते", amount:1000 },
+  { purpose:"बक्षीस रक्कम",  date:"२०२६-०९-२३", paidTo:"केशव बाबा तरुण मित्र मंडळ", amount:150 }
 ];
 
 /* ============================================================
