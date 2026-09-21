@@ -266,7 +266,6 @@ h1,h2,h3,.font-deva{
   color:var(--ink-soft);
   margin-top:4px;
 }
-/* ✅ प्रत्येक नाव वेगळ्या ओळीवर */
 .committee-card .names{
   display:flex;
   flex-direction:column;
@@ -277,6 +276,13 @@ h1,h2,h3,.font-deva{
   font-size:1.05rem;
   line-height:1.5;
   display:block;
+}
+/* ✅ कार्यकारिणी सदस्य कार्ड मध्यभागी */
+.committee-card.center-card{
+  grid-column:1 / -1;
+  max-width:490px;
+  margin:0 auto;
+  width:100%;
 }
 
 /* ============================================================
@@ -690,6 +696,7 @@ footer::before{
   .committee-card span{font-size:.72rem;}
   .committee-card strong{font-size:.95rem;}
   .committee-card .names strong{font-size:.88rem;}
+  .committee-card.center-card{grid-column:1 / -1; max-width:100%;}
   .winners-grid{grid-template-columns:repeat(3, 1fr); gap:8px;}
   .winner-card{padding:12px 6px;}
   .winner-card .game-name{font-size:.68rem;}
@@ -704,6 +711,7 @@ footer::before{
   .committee-card span{font-size:.65rem;}
   .committee-card strong{font-size:.82rem;}
   .committee-card .names strong{font-size:.78rem;}
+  .committee-card.center-card{grid-column:1 / -1; max-width:100%;}
   .winners-grid{grid-template-columns:repeat(3, 1fr); gap:6px;}
   .winner-card{padding:10px 4px;}
   .winner-card .game-name{font-size:.62rem; min-height:3em;}
@@ -809,7 +817,7 @@ footer::before{
         <strong>सार्थक जंगम</strong>
       </div>
     </div>
-    <div class="committee-card">
+    <div class="committee-card center-card">
       <span>कार्यकारिणी सदस्य</span>
       <div class="names">
         <strong>कुणाल सातपुते</strong>
@@ -1052,7 +1060,8 @@ const EXPENSES = [
   { purpose:"अगरबत्ती",      date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:200  },
   { purpose:"कुलूप",         date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:30   },
   { purpose:"गणेश मूर्ती",   date:"२०२६-०९-१६", paidTo:"सतीश सातपुते", amount:1000 },
-  { purpose:"बक्षीस रक्कम",  date:"२०२६-०९-२३", paidTo:"केशव बाबा तरुण मित्र मंडळ", amount:150 }
+  { purpose:"बक्षीस रक्कम",  date:"२०२६-०९-२३", paidTo:"केशव बाबा तरुण मित्र मंडळ", amount:150 },
+  { purpose:"पंचा",          date:"२०२६-०९-२१", paidTo:"राज सातपुते", amount:1500 }
 ];
 
 /* ============================================================
@@ -1147,8 +1156,9 @@ function renderSummary(){
     document.getElementById('barKharch').style.width = (kharch / maxVal * 100) + '%';
   }, 200);
 
+  /* ✅ सर्व खर्च दाखवले जातील */
   const box = document.getElementById('expenseBreakdown');
-  const sorted = [...EXPENSES].sort((a, b) => b.amount - a.amount).slice(0, 6);
+  const sorted = [...EXPENSES].sort((a, b) => b.amount - a.amount);
   const maxEx = sorted.length ? sorted[0].amount : 1;
 
   box.innerHTML = sorted.map(e => `
