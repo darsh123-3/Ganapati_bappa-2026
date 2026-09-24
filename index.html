@@ -135,7 +135,7 @@ h1,h2,h3,.font-deva{
 .hero{
   position:relative;
   text-align:center;
-  padding:70px 20px 60px;
+  padding:70px 20px 40px;
   overflow:hidden;
 }
 .hero::before{
@@ -197,8 +197,57 @@ h1,h2,h3,.font-deva{
 }
 .hero p.lead{
   color:var(--ink-soft);
-  font-size:1.02rem;
+  font-size:1.05rem;
   max-width:780px;margin:0 auto 10px;
+}
+
+/* ============================================================
+   📸 फोटो गॅलरी — दोन फोटो एका रांगेत
+   ============================================================ */
+.gallery-section{
+  max-width:1000px;
+  margin:0 auto;
+  padding:10px 20px 50px;
+  position:relative;
+  z-index:3;
+}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:20px;
+}
+.gallery-item{
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
+  border:3px solid #fff;
+  box-shadow:0 12px 30px rgba(109,15,20,.18), 0 4px 10px rgba(212,160,23,.15);
+  background:#fff;
+  aspect-ratio:4 / 3;
+  transition:.4s;
+  cursor:pointer;
+}
+.gallery-item::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:14px;
+  border:1px solid rgba(212,160,23,.35);
+  pointer-events:none;
+}
+.gallery-item:hover{
+  transform:translateY(-6px) scale(1.02);
+  box-shadow:0 20px 45px rgba(109,15,20,.25), 0 8px 18px rgba(212,160,23,.25);
+}
+.gallery-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform .6s ease;
+}
+.gallery-item:hover img{
+  transform:scale(1.08);
 }
 
 .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px;}
@@ -329,20 +378,6 @@ h1,h2,h3,.font-deva{
   border-radius:999px;
   font-weight:700;
   font-size:.9rem;
-}
-.prize-note{
-  text-align:center;
-  margin-top:20px;
-  font-weight:600;
-  color:var(--maroon);
-  background:linear-gradient(135deg,#fff8ec,#ffeecb);
-  padding:12px 20px;
-  border-radius:12px;
-  border-left:5px solid var(--saffron);
-  max-width:800px;
-  margin-left:auto;
-  margin-right:auto;
-  box-shadow:var(--shadow);
 }
 
 /* ============================================================
@@ -677,8 +712,11 @@ footer::before{
   .links{width:100%;justify-content:center;order:3;padding-top:8px;}
   .links a{padding:6px 12px;font-size:.85rem;}
   .nav-inner{flex-wrap:wrap;}
-  .hero{padding:50px 16px 44px;}
+  .hero{padding:50px 16px 30px;}
   .mandala{width:420px;height:420px;}
+  .gallery-section{padding:10px 14px 40px;}
+  .gallery-grid{gap:12px;}
+  .gallery-item{border-radius:14px;border-width:2px;}
   .section{padding:44px 14px;}
   .stats{padding:0 14px 10px;grid-template-columns:1fr 1fr;gap:12px;}
   .stat-card{padding:18px 14px;}
@@ -705,6 +743,7 @@ footer::before{
 
 @media (max-width:400px){
   .stats{grid-template-columns:1fr;}
+  .gallery-grid{gap:10px;}
   .committee-grid{grid-template-columns:repeat(2, 1fr); gap:8px;}
   .committee-card{padding:10px 6px; min-height:74px;}
   .committee-card span{font-size:.65rem;}
@@ -762,17 +801,29 @@ footer::before{
     <h1>केशव बाबा तरुण मित्र मंडळ</h1>
     <div class="tagline">॥ गणपती बाप्पा मोरया ॥</div>
     <p class="lead">
-      श्री गणेशाच्या मंगलमय आगमनानिमित्त सातपुते परिवाराच्या वतीने
-      <b>बुधवार, दिनांक २३ सप्टेंबर २०२६</b> रोजी सायंकाळी आरतीनंतर
-      <b>महाप्रसादाचे</b> आयोजन करण्यात आले आहे.
-      <br><br>
-      या मंगलमय प्रसंगी आपल्या परिवारातील सर्व सदस्यांनी एकत्र येऊन
-      गणपती बाप्पांचा आशीर्वाद घ्यावा आणि महाप्रसादाचा आनंद घ्यावा,
-      ही मनःपूर्वक विनंती. 🙏
+      श्री गणेशाच्या मंगलमय आगमनानिमित्त सातपुते परिवाराच्या वतीने आयोजित करण्यात आलेल्या <b>महाप्रसादाचे काही मंगलमय क्षण...</b> 🙏🏻🌺
     </p>
 
     <div class="hero-btns">
       <a href="#hishob" class="btn btn-primary">📊 संपूर्ण हिशोब पहा</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ फोटो गॅलरी ============ -->
+<section class="gallery-section">
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="j1.jpeg" alt="महाप्रसाद क्षण १" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="j2.jpeg" alt="महाप्रसाद क्षण २" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="j3.jpeg" alt="महाप्रसाद क्षण ३" loading="lazy">
+    </div>
+    <div class="gallery-item">
+      <img src="j4.jpeg" alt="महाप्रसाद क्षण ४" loading="lazy">
     </div>
   </div>
 </section>
@@ -852,10 +903,6 @@ footer::before{
       <span class="prize">₹ ५१</span>
     </div>
   </div>
-
-  <p class="prize-note">
-    बक्षीस रक्कम दिनांक २३ सप्टेंबर २०२६ रोजी विजेत्यांना दिली जाईल. 🙏
-  </p>
 </section>
 
 <!-- ============ स्टॅट कार्ड्स ============ -->
@@ -1062,7 +1109,8 @@ const EXPENSES = [
   { purpose:"बक्षीस रक्कम",        date:"२०२६-०९-२३", paidTo:"केशव बाबा तरुण मित्र मंडळ", amount:150 },
   { purpose:"पंचा",                date:"२०२६-०९-२१", paidTo:"अक्षय सातपुते", amount:1200 },
   { purpose:"केशव बाबा बॅनर",      date:"२०२६-०९-२१", paidTo:"अक्षय सातपुते", amount:460  },
-  { purpose:"महाप्रसाद",           date:"२०२६-०९-२३", paidTo:"अक्षय सातपुते", amount:8000 }
+  { purpose:"महाप्रसाद",           date:"२०२६-०९-२३", paidTo:"अक्षय सातपुते", amount:8000 },
+  { purpose:"भजन (वादक)",          date:"२०२६-०९-२३", paidTo:"अक्षय सातपुते", amount:900  }
 ];
 
 /* ============================================================
