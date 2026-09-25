@@ -57,9 +57,6 @@ h1,h2,h3,.font-deva{
   letter-spacing:.3px;
 }
 
-/* ============================================================
-   🚩 वरची पट्टी
-   ============================================================ */
 .top-strip{
   background:linear-gradient(90deg,var(--maroon-dark),var(--maroon),var(--saffron),var(--maroon),var(--maroon-dark));
   background-size:200% 100%;
@@ -76,9 +73,6 @@ h1,h2,h3,.font-deva{
   100%{background-position:200% 50%}
 }
 
-/* ============================================================
-   🧭 नेव्हिगेशन
-   ============================================================ */
 .nav{
   position:sticky;top:0;z-index:100;
   background:rgba(255,248,236,.88);
@@ -129,9 +123,6 @@ h1,h2,h3,.font-deva{
   box-shadow:0 6px 16px rgba(255,122,24,.35);
 }
 
-/* ============================================================
-   🕉️ हिरो सेक्शन
-   ============================================================ */
 .hero{
   position:relative;
   text-align:center;
@@ -201,9 +192,6 @@ h1,h2,h3,.font-deva{
   max-width:780px;margin:0 auto 10px;
 }
 
-/* ============================================================
-   📸 फोटो गॅलरी — दोन फोटो एका रांगेत
-   ============================================================ */
 .gallery-section{
   max-width:1000px;
   margin:0 auto;
@@ -279,9 +267,6 @@ h1,h2,h3,.font-deva{
 }
 .btn-ghost:hover{background:var(--maroon);color:#ffe9b0;transform:translateY(-3px);}
 
-/* ============================================================
-   👥 कार्यकारिणी — दोन सदस्य एका रांगेत
-   ============================================================ */
 .committee-grid{
   display:grid;
   grid-template-columns:repeat(2, 1fr);
@@ -342,9 +327,6 @@ h1,h2,h3,.font-deva{
   width:100%;
 }
 
-/* ============================================================
-   🏆 खेळ विजेते — दोन एका रांगेत
-   ============================================================ */
 .winners-grid{
   display:grid;
   grid-template-columns:repeat(2, 1fr);
@@ -389,9 +371,6 @@ h1,h2,h3,.font-deva{
   font-size:.9rem;
 }
 
-/* ============================================================
-   📊 स्टॅट कार्ड्स
-   ============================================================ */
 .stats{
   max-width:1180px;margin:0 auto;
   padding:0 20px 20px;
@@ -436,9 +415,6 @@ h1,h2,h3,.font-deva{
 .stat-card.green::after{background:linear-gradient(90deg,#2ecc71,var(--green));}
 .stat-card.red::after{background:linear-gradient(90deg,#e74c3c,var(--red));}
 
-/* ============================================================
-   📑 टॅब सेक्शन
-   ============================================================ */
 .section{
   max-width:1180px;margin:0 auto;
   padding:60px 20px;
@@ -482,9 +458,6 @@ h1,h2,h3,.font-deva{
   to{opacity:1;transform:translateY(0);}
 }
 
-/* ============================================================
-   🔍 शोध + टेबल
-   ============================================================ */
 .toolbar{
   display:flex;justify-content:space-between;
   align-items:center;gap:14px;flex-wrap:wrap;
@@ -560,15 +533,6 @@ tbody tr:last-child td{border-bottom:none;}
   font-variant-numeric:tabular-nums;
 }
 .name-cell{font-weight:600;color:var(--ink);}
-.sub{display:block;font-size:.78rem;color:var(--ink-soft);font-weight:400;}
-
-.badge{
-  display:inline-block;
-  padding:4px 14px;border-radius:999px;
-  font-size:.76rem;font-weight:700;white-space:nowrap;
-}
-.badge-paid{background:rgba(31,122,77,.12);color:var(--green);border:1px solid rgba(31,122,77,.3);}
-.badge-mode{background:rgba(109,15,20,.08);color:var(--maroon);border:1px solid rgba(109,15,20,.2);}
 
 tfoot td{
   background:linear-gradient(180deg,#fff3d6,#ffe8b8);
@@ -582,9 +546,6 @@ tfoot td{
   font-size:.98rem;
 }
 
-/* ============================================================
-   📈 सारांश
-   ============================================================ */
 .summary-grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -636,9 +597,6 @@ tfoot td{
 }
 .balance-box .hint{font-size:.83rem;color:var(--ink-soft);}
 
-/* ============================================================
-   🔔 सूचना
-   ============================================================ */
 .notice{
   margin-top:28px;
   background:linear-gradient(135deg,#fff6e2,#fff);
@@ -652,9 +610,6 @@ tfoot td{
 }
 .notice b{color:var(--maroon);}
 
-/* ============================================================
-   🙏 फूटर
-   ============================================================ */
 footer{
   background:linear-gradient(180deg,var(--maroon),var(--maroon-dark));
   color:#ffe9b0;
@@ -695,9 +650,6 @@ footer::before{
   margin-bottom:14px;letter-spacing:1px;
 }
 
-/* ============================================================
-   ⬆️ वर जा बटण
-   ============================================================ */
 .to-top{
   position:fixed;right:20px;bottom:20px;
   width:48px;height:48px;border-radius:50%;
@@ -711,9 +663,6 @@ footer::before{
 .to-top.show{opacity:1;visibility:visible;}
 .to-top:hover{transform:translateY(-4px);}
 
-/* ============================================================
-   📱 मोबाईल
-   ============================================================ */
 @media (max-width:720px){
   .nav-inner{padding:10px 14px;}
   .brand-name{font-size:.88rem;}
@@ -766,7 +715,6 @@ footer::before{
   .winner-card .prize{font-size:.7rem; padding:2px 8px;}
 }
 
-/* प्रिंट */
 @media print{
   .nav,.to-top,.top-strip,.hero-btns,.search-box{display:none!important;}
   .panel{display:block!important;}
@@ -777,10 +725,8 @@ footer::before{
 </head>
 <body>
 
-<!-- ============ वरची पट्टी ============ -->
 <div class="top-strip">|| श्री गणेशाय नमः ||</div>
 
-<!-- ============ नेव्हिगेशन ============ -->
 <header class="nav">
   <div class="nav-inner">
     <div class="brand">
@@ -802,7 +748,6 @@ footer::before{
   </div>
 </header>
 
-<!-- ============ हिरो ============ -->
 <section class="hero" id="home">
   <div class="mandala"></div>
   <div class="hero-inner">
@@ -844,22 +789,22 @@ footer::before{
   </p>
   <div class="gallery-grid">
     <div class="gallery-item">
-      <img src="mir1.jpeg" alt="विसर्जन मिरवणूक क्षण १" loading="lazy">
+      <img src="mir1.jpg" alt="विसर्जन मिरवणूक क्षण १" loading="lazy">
     </div>
     <div class="gallery-item">
-      <img src="mir2.jpeg" alt="विसर्जन मिरवणूक क्षण २" loading="lazy">
+      <img src="mir2.jpg" alt="विसर्जन मिरवणूक क्षण २" loading="lazy">
     </div>
     <div class="gallery-item">
-      <img src="mir3.jpeg" alt="विसर्जन मिरवणूक क्षण ३" loading="lazy">
+      <img src="mir3.jpg" alt="विसर्जन मिरवणूक क्षण ३" loading="lazy">
     </div>
     <div class="gallery-item">
-      <img src="mir4.jpeg" alt="विसर्जन मिरवणूक क्षण ४" loading="lazy">
+      <img src="mir4.jpg" alt="विसर्जन मिरवणूक क्षण ४" loading="lazy">
     </div>
     <div class="gallery-item">
-      <img src="mir5.jpeg" alt="विसर्जन मिरवणूक क्षण ५" loading="lazy">
+      <img src="mir5.jpg" alt="विसर्जन मिरवणूक क्षण ५" loading="lazy">
     </div>
     <div class="gallery-item">
-      <img src="mir6.jpeg" alt="विसर्जन मिरवणूक क्षण ६" loading="lazy">
+      <img src="mir6.jpg" alt="विसर्जन मिरवणूक क्षण ६" loading="lazy">
     </div>
   </div>
 </section>
@@ -978,7 +923,6 @@ footer::before{
     <p>खालील टॅबवर क्लिक करून जमा, खर्च व एकूण सारांश पाहा.</p>
   </div>
 
-  <!-- टॅब बटणे — चालू वर्ष खर्च is default active -->
   <div class="tabs">
     <button class="tab-btn" data-tab="tab-jama">💰 रक्कम जमा</button>
     <button class="tab-btn active" data-tab="tab-kharch">🧾 चालू वर्ष खर्च</button>
@@ -1088,7 +1032,6 @@ footer::before{
   </div>
 </section>
 
-<!-- ============ फूटर ============ -->
 <footer id="sampark">
   <div class="footer-inner">
     <div>
@@ -1121,31 +1064,26 @@ footer::before{
   </div>
 </footer>
 
-<!-- वर जा बटण -->
 <button class="to-top" id="toTop" aria-label="वर जा">↑</button>
 
 <script>
-/* ============================================================
-   📝 १. डेटा — फक्त इथे बदल करा
-   ------------------------------------------------------------
-   नवीन नोंद जोडण्यासाठी खालील यादीत नवीन ओळ जोडा.
-   रक्कम फक्त आकड्यात लिहा (उदा. 5000).
-   ============================================================ */
-
 const MANDAL = {
   year: "२०२६",
   contactName: "दर्शन सातपुते"
 };
 
-/* ---------- १. रक्कम जमा (देणगीदार) — वर्गणी जमा केलेले सदस्य ---------- */
+/* ---------- १. रक्कम जमा — वर्गणी जमा केलेले सदस्य ---------- */
 const COLLECTIONS = [
-  { name:"श्री. गंगाधर सातपुते",   date:"२०२६-०९-२३", mode:"रोख", amount:832 },
-  { name:"श्री. तुळशीराम सातपुते", date:"२०२६-०९-२३", mode:"रोख", amount:832 },
-  { name:"श्री. सोमनाथ सातपुते",   date:"२०२६-०९-२३", mode:"रोख", amount:832 },
-  { name:"श्री. गोरक्षनाथ सातपुते", date:"२०२६-०९-२३", mode:"रोख", amount:832 }
+  { name:"श्री. गंगाधर सातपुते",     date:"२०२६-०९-२३", mode:"रोख", amount:832 },
+  { name:"श्री. तुळशीराम सातपुते",   date:"२०२६-०९-२३", mode:"रोख", amount:832 },
+  { name:"श्री. सोमनाथ सातपुते",     date:"२०२६-०९-२३", mode:"रोख", amount:832 },
+  { name:"श्री. गोरक्षनाथ सातपुते",  date:"२०२६-०९-२३", mode:"रोख", amount:832 },
+  { name:"श्री. राजेंद्र सातपुते",    date:"२०२६-०९-२३", mode:"रोख", amount:832 },
+  { name:"श्री. किसन सातपुते",       date:"२०२६-०९-२३", mode:"रोख", amount:832 },
+  { name:"श्री. सुदाम सातपुते",      date:"२०२६-०९-२३", mode:"रोख", amount:832 }
 ];
 
-/* ---------- २. चालू वर्ष खर्च — तुमची माहिती ---------- */
+/* ---------- २. चालू वर्ष खर्च ---------- */
 const EXPENSES = [
   { purpose:"मशीन दुरुस्ती",       date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:300  },
   { purpose:"नवीन माइक",           date:"२०२६-०९-१६", paidTo:"अक्षय सातपुते", amount:1600 },
@@ -1164,24 +1102,14 @@ const EXPENSES = [
   { purpose:"ट्रॅक्टर सजावट",       date:"२०२६-०९-२३", paidTo:"अक्षय सातपुते", amount:110  }
 ];
 
-/* ============================================================
-   🛠️ २. सहाय्यक फंक्शन्स
-   ============================================================ */
 const money = n => '₹ ' + Number(n).toLocaleString('en-IN');
 const sum   = (arr, key) => arr.reduce((t, o) => t + Number(o[key] || 0), 0);
 const esc   = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-/* ============================================================
-   📋 ३. टेबल रेंडर
-   ============================================================ */
-
-/* --- रक्कम जमा (फक्त नाव व रक्कम) --- */
 function renderJama(filter = ''){
   const tbody = document.querySelector('#jamaTable tbody');
   const f = filter.trim().toLowerCase();
-  const rows = COLLECTIONS.filter(r =>
-    r.name.toLowerCase().includes(f)
-  );
+  const rows = COLLECTIONS.filter(r => r.name.toLowerCase().includes(f));
 
   if(!rows.length){
     tbody.innerHTML = `<tr><td colspan="3" class="empty-state">कोणतीही नोंद सापडली नाही 🙏</td></tr>`;
@@ -1198,7 +1126,6 @@ function renderJama(filter = ''){
   document.getElementById('jamaCount').textContent = 'एकूण नोंदी : ' + rows.length;
 }
 
-/* --- खर्च --- */
 function renderKharch(filter = ''){
   const tbody = document.querySelector('#kharchTable tbody');
   const f = filter.trim().toLowerCase();
@@ -1225,9 +1152,6 @@ function renderKharch(filter = ''){
   document.getElementById('kharchCount').textContent = 'एकूण नोंदी : ' + rows.length;
 }
 
-/* ============================================================
-   📈 ४. सारांश
-   ============================================================ */
 function renderSummary(){
   const jama   = sum(COLLECTIONS, 'amount');
   const kharch = sum(EXPENSES, 'amount');
@@ -1253,7 +1177,6 @@ function renderSummary(){
     document.getElementById('barKharch').style.width = (kharch / maxVal * 100) + '%';
   }, 200);
 
-  /* ✅ सर्व खर्च दाखवले जातील */
   const box = document.getElementById('expenseBreakdown');
   const sorted = [...EXPENSES].sort((a, b) => b.amount - a.amount);
   const maxEx = sorted.length ? sorted[0].amount : 1;
@@ -1274,9 +1197,6 @@ function renderSummary(){
   }, 300);
 }
 
-/* ============================================================
-   🔢 ५. काउंटर अ‍ॅनिमेशन
-   ============================================================ */
 function animateCounter(el, target){
   const duration = 1300;
   const start = performance.now();
@@ -1317,9 +1237,6 @@ function initCounters(){
   });
 }
 
-/* ============================================================
-   🎛️ ६. इव्हेंट्स
-   ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('navYear').textContent   = MANDAL.year;
   document.getElementById('heroYear').textContent  = MANDAL.year;
