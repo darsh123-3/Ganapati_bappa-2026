@@ -951,10 +951,13 @@ footer::before{
 
   <!-- ===== टॅब १ : रक्कम जमा ===== -->
   <div class="panel" id="tab-jama">
+    <div class="section-head" style="margin-bottom:20px;">
+      <h2 style="font-size:1.4rem;">🙏 वर्गणी जमा केलेले सदस्य 🙏</h2>
+    </div>
     <div class="toolbar">
       <div class="search-box">
         <span>🔍</span>
-        <input type="text" placeholder="नाव किंवा प्रकार शोधा..." data-search="jamaTable">
+        <input type="text" placeholder="नाव शोधा..." data-search="jamaTable">
       </div>
       <div class="count-chip" id="jamaCount">एकूण नोंदी : 0</div>
     </div>
@@ -965,15 +968,13 @@ footer::before{
           <tr>
             <th>अ.क्र.</th>
             <th>गणेश भक्ताचे नाव</th>
-            <th>दिनांक</th>
-            <th>प्रकार</th>
             <th style="text-align:right">रक्कम</th>
           </tr>
         </thead>
         <tbody></tbody>
         <tfoot>
           <tr>
-            <td colspan="4" style="text-align:right">एकूण जमा रक्कम</td>
+            <td colspan="2" style="text-align:right">एकूण जमा रक्कम</td>
             <td style="text-align:right" id="jamaTotal">₹ 0</td>
           </tr>
         </tfoot>
@@ -1100,8 +1101,13 @@ const MANDAL = {
   contactName: "दर्शन सातपुते"
 };
 
-/* ---------- १. रक्कम जमा (देणगीदार) — सध्या रिकामे ---------- */
-const COLLECTIONS = [];
+/* ---------- १. रक्कम जमा (देणगीदार) — वर्गणी जमा केलेले सदस्य ---------- */
+const COLLECTIONS = [
+  { name:"श्री. गंगाधर सातपुते",   date:"२०२६-०९-२३", mode:"रोख", amount:832 },
+  { name:"श्री. तुळशीराम सातपुते", date:"२०२६-०९-२३", mode:"रोख", amount:832 },
+  { name:"श्री. सोमनाथ सातपुते",   date:"२०२६-०९-२३", mode:"रोख", amount:832 },
+  { name:"श्री. गोरक्षनाथ सातपुते", date:"२०२६-०९-२३", mode:"रोख", amount:832 }
+];
 
 /* ---------- २. चालू वर्ष खर्च — तुमची माहिती ---------- */
 const EXPENSES = [
@@ -1133,24 +1139,21 @@ const esc   = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','
    📋 ३. टेबल रेंडर
    ============================================================ */
 
-/* --- रक्कम जमा --- */
+/* --- रक्कम जमा (फक्त नाव व रक्कम) --- */
 function renderJama(filter = ''){
   const tbody = document.querySelector('#jamaTable tbody');
   const f = filter.trim().toLowerCase();
   const rows = COLLECTIONS.filter(r =>
-    r.name.toLowerCase().includes(f) ||
-    (r.mode || '').toLowerCase().includes(f)
+    r.name.toLowerCase().includes(f)
   );
 
   if(!rows.length){
-    tbody.innerHTML = `<tr><td colspan="5" class="empty-state">कोणतीही नोंद सापडली नाही 🙏</td></tr>`;
+    tbody.innerHTML = `<tr><td colspan="3" class="empty-state">कोणतीही नोंद सापडली नाही 🙏</td></tr>`;
   } else {
     tbody.innerHTML = rows.map((r, i) => `
       <tr>
         <td class="sr">${i + 1}</td>
         <td class="name-cell">${esc(r.name)}</td>
-        <td>${esc(r.date)}</td>
-        <td><span class="badge badge-paid">${esc(r.mode)}</span></td>
         <td class="num" style="text-align:right">${money(r.amount)}</td>
       </tr>`).join('');
   }
