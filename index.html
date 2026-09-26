@@ -247,6 +247,14 @@ h1,h2,h3,.font-deva{
   transform:scale(1.08);
 }
 
+.winners-photo{
+  max-width:600px;
+  margin:0 auto 40px;
+}
+.winners-photo .gallery-item{
+  aspect-ratio:4 / 3;
+}
+
 .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:32px;}
 .btn{
   display:inline-flex;align-items:center;gap:8px;
@@ -675,6 +683,7 @@ footer::before{
   .gallery-section{padding:10px 14px 40px;}
   .gallery-grid{gap:12px;}
   .gallery-item{border-radius:14px;border-width:2px;}
+  .winners-photo{max-width:100%;}
   .section{padding:44px 14px;}
   .stats{padding:0 14px 10px;grid-template-columns:1fr 1fr;gap:12px;}
   .stat-card{padding:18px 14px;}
@@ -867,6 +876,13 @@ footer::before{
     <p>गणेशोत्सवानिमित्त आयोजित खेळांमधील</p>
   </div>
 
+  <div class="winners-photo">
+    <div class="gallery-item">
+      <!-- ✅ win1.jpg -->
+      <img src="win1.jpg" alt="गणेशोत्सव खेळ विजेते २०२६" loading="lazy">
+    </div>
+  </div>
+
   <div class="winners-grid">
     <div class="winner-card">
       <span class="game-name">संगीत खुर्ची</span>
@@ -923,14 +939,15 @@ footer::before{
     <p>खालील टॅबवर क्लिक करून जमा, खर्च व एकूण सारांश पाहा.</p>
   </div>
 
+  <!-- ✅ टॅब बटणे — रक्कम जमा is default active -->
   <div class="tabs">
-    <button class="tab-btn" data-tab="tab-jama">💰 रक्कम जमा</button>
-    <button class="tab-btn active" data-tab="tab-kharch">🧾 चालू वर्ष खर्च</button>
+    <button class="tab-btn active" data-tab="tab-jama">💰 रक्कम जमा</button>
+    <button class="tab-btn" data-tab="tab-kharch">🧾 चालू वर्ष खर्च</button>
     <button class="tab-btn" data-tab="tab-saransh">📈 सारांश</button>
   </div>
 
-  <!-- ===== टॅब १ : रक्कम जमा ===== -->
-  <div class="panel" id="tab-jama">
+  <!-- ===== टॅब १ : रक्कम जमा (Default Active) ===== -->
+  <div class="panel active" id="tab-jama">
     <div class="section-head" style="margin-bottom:20px;">
       <h2 style="font-size:1.4rem;">🙏 वर्गणी जमा सदस्यांची यादी 🙏</h2>
     </div>
@@ -962,8 +979,8 @@ footer::before{
     </div>
   </div>
 
-  <!-- ===== टॅब २ : खर्च (Default Active) ===== -->
-  <div class="panel active" id="tab-kharch">
+  <!-- ===== टॅब २ : खर्च ===== -->
+  <div class="panel" id="tab-kharch">
     <div class="toolbar">
       <div class="search-box">
         <span>🔍</span>
@@ -1037,7 +1054,7 @@ footer::before{
     <div>
       <h4>🚩 केशव बाबा तरुण मित्र मंडळ</h4>
       <p>गणेशोत्सव <span id="footYear">२०२६</span><br>
-      एकत्र येऊ, बाप्पाची सेवा करू, आपली परंपरा जपू.</p>
+      एकत्र येऊ, बाप्पाची सेवा करू, आपली परंपरा जिवंत ठेवू.</p>
     </div>
 
     <div>
@@ -1090,7 +1107,7 @@ const COLLECTIONS = [
   { name:"श्री. शिवाजी सातपुते",     date:"२०२६-०९-२३", mode:"रोख", amount:832 },
   { name:"श्री. भाऊसाहेब सातपुते",   date:"२०२६-०९-२३", mode:"रोख", amount:832 },
   { name:"श्री. बादशहा सातपुते",     date:"२०२६-०९-२३", mode:"रोख", amount:832 },
-  { name:"श्री. स्वप्नील सातपुते",    date:"२०२६-०९-२३", mode:"रोख", amount:832 }
+  { name:"श्री. उत्तम सातपुते",      date:"२०२६-०९-२३", mode:"रोख", amount:832 }
 ];
 
 /* ---------- २. चालू वर्ष खर्च ---------- */
