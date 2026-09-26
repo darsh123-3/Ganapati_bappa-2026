@@ -188,10 +188,74 @@ h1,h2,h3,.font-deva{
 }
 .hero p.lead{
   color:var(--ink-soft);
-  font-size:1.05rem;
+  font-family:'Tiro Devanagari Marathi',serif;
+  font-size:clamp(1.05rem,2.6vw,1.35rem);
+  line-height:1.9;
   max-width:780px;margin:0 auto 10px;
 }
+.hero p.lead .highlight{
+  font-weight:800;
+  color:#c25e00;
+  font-size:1.18em;
+  position:relative;
+  display:inline-block;
+  padding:0 4px;
+  letter-spacing:.5px;
+}
+.hero p.lead .highlight::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:-2px;
+  height:6px;
+  background:linear-gradient(90deg, transparent, rgba(255,180,60,.7), transparent);
+  border-radius:999px;
+}
 
+/* ============================================================
+   🙏 महाप्रसाद संदेश (no border box)
+   ============================================================ */
+.blessing-section{
+  max-width:900px;
+  margin:0 auto;
+  padding:20px 20px 40px;
+  position:relative;
+  z-index:3;
+  text-align:center;
+}
+.blessing-inner{
+  position:relative;
+  z-index:2;
+}
+.blessing-ornament{
+  display:block;
+  color:var(--gold);
+  letter-spacing:10px;
+  font-size:1rem;
+  margin-bottom:14px;
+}
+.blessing-text{
+  font-family:'Tiro Devanagari Marathi',serif;
+  font-size:clamp(1.05rem,2.6vw,1.35rem);
+  color:var(--maroon);
+  line-height:1.9;
+  max-width:720px;
+  margin:0 auto;
+  font-weight:400;
+}
+.blessing-text b{
+  color:#c25e00;
+  font-weight:800;
+}
+.blessing-emoji{
+  display:block;
+  font-size:1.6rem;
+  margin-top:16px;
+  letter-spacing:6px;
+}
+
+/* ============================================================
+   📸 फोटो गॅलरी — दोन फोटो एका रांगेत
+   ============================================================ */
 .gallery-section{
   max-width:1000px;
   margin:0 auto;
@@ -680,6 +744,10 @@ footer::before{
   .nav-inner{flex-wrap:wrap;}
   .hero{padding:50px 16px 30px;}
   .mandala{width:420px;height:420px;}
+  .hero p.lead{font-size:1.02rem;}
+  .hero p.lead .highlight{font-size:1.15em;}
+  .blessing-section{padding:14px 14px 34px;}
+  .blessing-text{font-size:1.02rem;}
   .gallery-section{padding:10px 14px 40px;}
   .gallery-grid{gap:12px;}
   .gallery-item{border-radius:14px;border-width:2px;}
@@ -757,6 +825,7 @@ footer::before{
   </div>
 </header>
 
+<!-- ============ हिरो ============ -->
 <section class="hero" id="home">
   <div class="mandala"></div>
   <div class="hero-inner">
@@ -764,12 +833,28 @@ footer::before{
     <h1>केशव बाबा तरुण मित्र मंडळ</h1>
     <div class="tagline">॥ गणपती बाप्पा मोरया ॥</div>
     <p class="lead">
-      श्री गणेशाच्या मंगलमय आगमनानिमित्त सातपुते परिवाराच्या वतीने आयोजित करण्यात आलेल्या <b>महाप्रसादाचे काही मंगलमय क्षण...</b> 🙏🏻🌺
+      सातपुते परिवाराची हीच <span class="highlight">आपुलकी</span>,
+      <span class="highlight">साथ</span> आणि
+      <span class="highlight">एकजूट</span> सदैव अशीच कायम राहो,
+      हीच गणपती बाप्पा व केशव बाबांच्या चरणी मनःपूर्वक प्रार्थना! 🙏🌺
     </p>
 
     <div class="hero-btns">
       <a href="#hishob" class="btn btn-primary">📊 संपूर्ण हिशोब पहा</a>
     </div>
+  </div>
+</section>
+
+<!-- ============ 🙏 महाप्रसाद संदेश (no border box) ============ -->
+<section class="blessing-section">
+  <div class="blessing-inner">
+    <span class="blessing-ornament">❖ ❖ ❖</span>
+    <p class="blessing-text">
+      श्री गणेशाच्या मंगलमय आगमनानिमित्त सातपुते परिवाराच्या वतीने
+      आयोजित करण्यात आलेल्या
+      <b>महाप्रसादाचे काही मंगलमय क्षण...</b>
+    </p>
+    <span class="blessing-emoji">🙏🏻 🌺</span>
   </div>
 </section>
 
